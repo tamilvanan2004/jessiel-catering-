@@ -1,511 +1,996 @@
-<!DOCTYPE html>
-
-<html class="scroll-smooth" lang="en"><head>
+<!DOCTYPE html><html class="scroll-smooth" lang="en">
+<head>
 <meta charset="utf-8"/>
 <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
 <title>Jaasiel Catering | Exquisite Flavors, Unforgettable Moments</title>
+<meta name="description" content="Jaasiel Catering offers luxury catering services for weddings, corporate events, private parties, and custom menus. Exquisite flavors, unforgettable moments."/>
 <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
-<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&amp;family=Montserrat:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
-<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
-<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
-<script id="tailwind-config">
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Montserrat:wght@300;400;500;600;700&display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet"/>
+<script>
       tailwind.config = {
         darkMode: "class",
         theme: {
           extend: {
-            "colors": {
-                    "on-tertiary-container": "#8c8881",
-                    "on-error": "#ffffff",
-                    "on-tertiary-fixed-variant": "#494640",
-                    "surface": "#fff8f7",
-                    "on-primary-container": "#d26a5f",
-                    "surface-bright": "#fff8f7",
-                    "on-error-container": "#93000a",
-                    "on-surface": "#281717",
-                    "secondary-fixed": "#ffdea5",
-                    "on-tertiary-fixed": "#1d1b16",
-                    "primary-fixed": "#ffdad5",
-                    "inverse-surface": "#3f2b2b",
-                    "tertiary-container": "#23211c",
-                    "surface-container-high": "#ffe1e0",
-                    "on-primary": "#ffffff",
-                    "on-secondary-container": "#785a1a",
-                    "surface-variant": "#fcdbda",
-                    "surface-container-highest": "#fcdbda",
-                    "secondary-container": "#fed488",
-                    "on-primary-fixed-variant": "#7e2b23",
-                    "surface-tint": "#9d4139",
-                    "on-background": "#281717",
-                    "outline-variant": "#dcc0bd",
-                    "on-secondary-fixed": "#261900",
-                    "on-primary-fixed": "#410001",
-                    "on-secondary-fixed-variant": "#5d4201",
-                    "secondary": "#775a19",
-                    "inverse-primary": "#ffb4aa",
-                    "on-surface-variant": "#554240",
-                    "surface-container-lowest": "#ffffff",
-                    "on-tertiary": "#ffffff",
-                    "tertiary-fixed-dim": "#cbc6bd",
-                    "primary": "#210000",
-                    "surface-dim": "#f3d3d2",
-                    "surface-container-low": "#fff0ef",
-                    "secondary-fixed-dim": "#e9c176",
-                    "outline": "#89726f",
-                    "inverse-on-surface": "#ffedec",
-                    "error": "#ba1a1a",
-                    "primary-fixed-dim": "#ffb4aa",
-                    "on-secondary": "#ffffff",
-                    "primary-container": "#4a0404",
-                    "tertiary": "#0c0a06",
-                    "background": "#fff8f7",
-                    "surface-container": "#ffe9e8",
-                    "error-container": "#ffdad6",
-                    "tertiary-fixed": "#e7e2d9"
+            colors: {
+              "primary": "#1a1a2e",
+              "primary-light": "#2d2d4a",
+              "primary-container": "#16213e",
+              "on-primary": "#ffffff",
+              "on-primary-container": "#e2c18d",
+              "secondary": "#c9a84c",
+              "secondary-dark": "#b8952f",
+              "secondary-container": "#f5e6c8",
+              "secondary-fixed": "#fef3dc",
+              "on-secondary": "#ffffff",
+              "on-secondary-container": "#8b6914",
+              "on-secondary-fixed": "#1a1a2e",
+              "surface": "#fafafa",
+              "surface-bright": "#ffffff",
+              "surface-dim": "#f0f0f2",
+              "surface-container": "#f5f5f7",
+              "surface-container-low": "#f8f8fa",
+              "surface-container-high": "#eef0f5",
+              "surface-container-highest": "#e8eaef",
+              "surface-variant": "#e8e8ee",
+              "on-surface": "#1a1a2e",
+              "on-surface-variant": "#6b7280",
+              "on-background": "#1a1a2e",
+              "background": "#ffffff",
+              "tertiary": "#0f0f1a",
+              "tertiary-container": "#1a1a2e",
+              "tertiary-fixed": "#e8e8ee",
+              "tertiary-fixed-dim": "#9ca3af",
+              "on-tertiary": "#ffffff",
+              "on-tertiary-container": "#9ca3af",
+              "on-tertiary-fixed": "#1a1a2e",
+              "on-tertiary-fixed-variant": "#6b7280",
+              "outline": "#9ca3af",
+              "outline-variant": "#d1d5db",
+              "error": "#ef4444",
+              "on-error": "#ffffff",
+              "error-container": "#fde2e2",
+              "on-error-container": "#b91c1c",
+              "inverse-surface": "#1a1a2e",
+              "inverse-on-surface": "#f5f5f7",
+              "inverse-primary": "#c9a84c",
             },
-            "borderRadius": {
-                    "DEFAULT": "0.25rem",
-                    "lg": "0.5rem",
-                    "xl": "0.75rem",
-                    "full": "9999px"
+            borderRadius: {
+              DEFAULT: "0.5rem",
+              lg: "0.75rem",
+              xl: "1rem",
+              "2xl": "1.5rem",
+              full: "9999px",
             },
-            "spacing": {
-                    "margin-mobile": "20px",
-                    "container-max": "1280px",
-                    "margin-desktop": "64px",
-                    "section-gap": "120px",
-                    "gutter": "24px",
-                    "unit": "8px"
+            spacing: {
+              "container-max": "1280px",
+              "gutter": "24px",
+              "unit": "8px",
             },
-            "fontFamily": {
-                    "body-lg": ["Montserrat"],
-                    "headline-xl-mobile": ["Playfair Display"],
-                    "headline-xl": ["Playfair Display"],
-                    "headline-lg": ["Playfair Display"],
-                    "headline-md": ["Playfair Display"],
-                    "label-lg": ["Montserrat"],
-                    "body-md": ["Montserrat"],
-                    "label-sm": ["Montserrat"]
+            fontFamily: {
+              display: ["Playfair Display", "serif"],
+              body: ["Montserrat", "sans-serif"],
             },
-            "fontSize": {
-                    "body-lg": ["18px", {"lineHeight": "28px", "fontWeight": "400"}],
-                    "headline-xl-mobile": ["40px", {"lineHeight": "48px", "fontWeight": "700"}],
-                    "headline-xl": ["64px", {"lineHeight": "72px", "letterSpacing": "-0.02em", "fontWeight": "700"}],
-                    "headline-lg": ["48px", {"lineHeight": "56px", "fontWeight": "600"}],
-                    "headline-md": ["32px", {"lineHeight": "40px", "fontWeight": "600"}],
-                    "label-lg": ["14px", {"lineHeight": "20px", "letterSpacing": "0.05em", "fontWeight": "600"}],
-                    "body-md": ["16px", {"lineHeight": "24px", "fontWeight": "400"}],
-                    "label-sm": ["12px", {"lineHeight": "16px", "fontWeight": "500"}]
-            }
+            fontSize: {
+              "hero-mobile": ["36px", { lineHeight: "44px", fontWeight: "700" }],
+              "hero-desktop": ["64px", { lineHeight: "72px", letterSpacing: "-0.02em", fontWeight: "700" }],
+              "heading-lg": ["48px", { lineHeight: "56px", fontWeight: "600" }],
+              "heading-lg-mobile": ["32px", { lineHeight: "40px", fontWeight: "600" }],
+              "heading-md": ["32px", { lineHeight: "40px", fontWeight: "600" }],
+              "heading-sm": ["24px", { lineHeight: "32px", fontWeight: "600" }],
+              "body-lg": ["18px", { lineHeight: "28px", fontWeight: "400" }],
+              "body-md": ["16px", { lineHeight: "24px", fontWeight: "400" }],
+              "body-sm": ["14px", { lineHeight: "20px", fontWeight: "400" }],
+              "label-lg": ["14px", { lineHeight: "20px", letterSpacing: "0.05em", fontWeight: "600" }],
+              "label-sm": ["12px", { lineHeight: "16px", fontWeight: "500" }],
+            },
+            keyframes: {
+              fadeInUp: {
+                "0%": { opacity: "0", transform: "translateY(30px)" },
+                "100%": { opacity: "1", transform: "translateY(0)" },
+              },
+              fadeIn: {
+                "0%": { opacity: "0" },
+                "100%": { opacity: "1" },
+              },
+              slideDown: {
+                "0%": { opacity: "0", maxHeight: "0" },
+                "100%": { opacity: "1", maxHeight: "400px" },
+              },
+              slideUp: {
+                "0%": { opacity: "1", maxHeight: "400px" },
+                "100%": { opacity: "0", maxHeight: "0" },
+              },
+              shimmer: {
+                "0%": { backgroundPosition: "-200% center" },
+                "100%": { backgroundPosition: "200% center" },
+              },
+              float: {
+                "0%, 100%": { transform: "translateY(0)" },
+                "50%": { transform: "translateY(-8px)" },
+              },
+            },
+            animation: {
+              "fade-in-up": "fadeInUp 0.7s ease-out forwards",
+              "fade-in": "fadeIn 0.5s ease-out forwards",
+              "slide-down": "slideDown 0.4s ease-out forwards",
+              "slide-up": "slideUp 0.3s ease-in forwards",
+              shimmer: "shimmer 3s ease-in-out infinite",
+              float: "float 6s ease-in-out infinite",
+            },
           },
         },
-      }
+      };
     </script>
 <style>
-        .material-symbols-outlined {
-            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
-        }
-        .signature-image-frame {
-            position: relative;
-        }
-        .signature-image-frame::after {
-            content: '';
-            position: absolute;
-            top: -12px;
-            right: -12px;
-            width: 100%;
-            height: 100%;
-            border: 1px solid #775a19;
-            z-index: -1;
-            transition: all 0.3s ease;
-        }
-        .signature-image-frame:hover::after {
-            top: -18px;
-            right: -18px;
-        }
-        .menu-item-row:nth-child(even) {
-            background-color: #fff0ef;
-        }
-    </style>
+    /* Material Symbols */
+    .material-symbols-outlined {
+      font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+    }
+
+    /* Premium gradient backgrounds */
+    .gradient-gold {
+      background: linear-gradient(135deg, #c9a84c 0%, #e8c97a 50%, #c9a84c 100%);
+    }
+    .gradient-gold-hover {
+      background: linear-gradient(135deg, #b8952f 0%, #d4b85e 50%, #b8952f 100%);
+    }
+    .gradient-dark {
+      background: linear-gradient(135deg, #1a1a2e 0%, #16213e 50%, #0f3460 100%);
+    }
+    .gradient-testimonial {
+      background: linear-gradient(160deg, #1a1a2e 0%, #16213e 40%, #1a2744 70%, #1a1a2e 100%);
+    }
+
+    /* Glassmorphism */
+    .glass {
+      background: rgba(255, 255, 255, 0.8);
+      backdrop-filter: blur(20px);
+      -webkit-backdrop-filter: blur(20px);
+      border: 1px solid rgba(255, 255, 255, 0.3);
+    }
+    .glass-dark {
+      background: rgba(26, 26, 46, 0.85);
+      backdrop-filter: blur(20px);
+      -webkit-backdrop-filter: blur(20px);
+    }
+
+    /* Gold shimmer button */
+    .btn-gold {
+      background: linear-gradient(135deg, #c9a84c 0%, #e8c97a 50%, #c9a84c 100%);
+      background-size: 200% auto;
+      color: #1a1a2e;
+      font-weight: 600;
+      transition: all 0.4s ease;
+      box-shadow: 0 4px 15px rgba(201, 168, 76, 0.3);
+    }
+    .btn-gold:hover {
+      background-position: right center;
+      box-shadow: 0 6px 25px rgba(201, 168, 76, 0.5);
+      transform: translateY(-2px);
+    }
+    .btn-gold:active {
+      transform: translateY(0) scale(0.98);
+    }
+
+    /* Outline button */
+    .btn-outline {
+      border: 2px solid #1a1a2e;
+      color: #1a1a2e;
+      font-weight: 600;
+      transition: all 0.4s ease;
+    }
+    .btn-outline:hover {
+      background: #1a1a2e;
+      color: #ffffff;
+      box-shadow: 0 6px 25px rgba(26, 26, 46, 0.3);
+      transform: translateY(-2px);
+    }
+
+    /* Signature image frame */
+    .signature-image-frame {
+      position: relative;
+    }
+    .signature-image-frame::after {
+      content: '';
+      position: absolute;
+      top: -12px;
+      right: -12px;
+      width: 100%;
+      height: 100%;
+      border: 2px solid #c9a84c;
+      border-radius: 0.75rem;
+      z-index: -1;
+      transition: all 0.4s ease;
+    }
+    .signature-image-frame:hover::after {
+      top: -18px;
+      right: -18px;
+    }
+
+    /* Menu rows */
+    .menu-item-row:nth-child(even) {
+      background-color: #f8f8fa;
+    }
+    .menu-item-row:hover {
+      background-color: #f0f0f5;
+    }
+
+    /* Service card hover */
+    .service-card {
+      transition: all 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+    }
+    .service-card:hover {
+      transform: translateY(-8px);
+      box-shadow: 0 20px 60px rgba(26, 26, 46, 0.12);
+    }
+
+    /* Form input focus animation */
+    .form-input {
+      position: relative;
+      border-bottom: 2px solid #d1d5db;
+      transition: border-color 0.3s ease;
+    }
+    .form-input:focus {
+      border-bottom-color: #c9a84c;
+      box-shadow: 0 2px 0 0 #c9a84c;
+    }
+
+    /* Scroll reveal */
+    .reveal {
+      opacity: 0;
+      transform: translateY(30px);
+      transition: all 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+    }
+    .reveal.revealed {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    /* Stagger children */
+    .stagger-children > * {
+      opacity: 0;
+      transform: translateY(20px);
+      transition: all 0.6s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+    }
+    .stagger-children.revealed > *:nth-child(1) { transition-delay: 0ms; opacity: 1; transform: translateY(0); }
+    .stagger-children.revealed > *:nth-child(2) { transition-delay: 100ms; opacity: 1; transform: translateY(0); }
+    .stagger-children.revealed > *:nth-child(3) { transition-delay: 200ms; opacity: 1; transform: translateY(0); }
+    .stagger-children.revealed > *:nth-child(4) { transition-delay: 300ms; opacity: 1; transform: translateY(0); }
+
+    /* Mobile menu */
+    .mobile-menu {
+      max-height: 0;
+      opacity: 0;
+      overflow: hidden;
+      transition: max-height 0.4s ease, opacity 0.3s ease;
+    }
+    .mobile-menu.open {
+      max-height: 500px;
+      opacity: 1;
+    }
+
+    /* Scroll to top button */
+    .scroll-top-btn {
+      opacity: 0;
+      pointer-events: none;
+      transform: translateY(20px);
+      transition: all 0.3s ease;
+    }
+    .scroll-top-btn.visible {
+      opacity: 1;
+      pointer-events: all;
+      transform: translateY(0);
+    }
+
+    /* Active nav link */
+    .nav-link {
+      position: relative;
+    }
+    .nav-link::after {
+      content: '';
+      position: absolute;
+      bottom: -4px;
+      left: 0;
+      width: 0;
+      height: 2px;
+      background: linear-gradient(90deg, #c9a84c, #e8c97a);
+      transition: width 0.3s ease;
+    }
+    .nav-link:hover::after,
+    .nav-link.active::after {
+      width: 100%;
+    }
+
+    /* Gold accent separator */
+    .gold-separator {
+      width: 60px;
+      height: 3px;
+      background: linear-gradient(90deg, #c9a84c, #e8c97a);
+      border-radius: 2px;
+    }
+
+    /* Gallery image overlay */
+    .gallery-img {
+      position: relative;
+      overflow: hidden;
+    }
+    .gallery-img::after {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(to top, rgba(26,26,46,0.3), transparent);
+      opacity: 0;
+      transition: opacity 0.4s ease;
+    }
+    .gallery-img:hover::after {
+      opacity: 1;
+    }
+    .gallery-img img {
+      transition: transform 0.7s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+    }
+    .gallery-img:hover img {
+      transform: scale(1.08);
+    }
+
+    /* Smooth scrollbar */
+    ::-webkit-scrollbar {
+      width: 8px;
+    }
+    ::-webkit-scrollbar-track {
+      background: #f5f5f7;
+    }
+    ::-webkit-scrollbar-thumb {
+      background: linear-gradient(180deg, #c9a84c, #1a1a2e);
+      border-radius: 4px;
+    }
+
+    /* Hide mobile frame on small screens */
+    @media (max-width: 767px) {
+      .signature-image-frame::after {
+        display: none;
+      }
+    }
+  </style>
 </head>
-<body class="bg-background text-on-surface font-body-md overflow-x-hidden">
+<body class="bg-background text-on-surface font-body overflow-x-hidden">
+
 <!-- TopNavBar -->
-<nav class="fixed top-0 w-full z-50 bg-surface/90 backdrop-blur-md shadow-sm h-20 transition-all duration-300">
-<div class="max-w-container-max mx-auto px-margin-desktop flex justify-between items-center h-full">
-<div class="font-headline-md text-headline-md text-primary tracking-tight">Jaasiel Catering</div>
-<div class="hidden md:flex gap-8 items-center">
-<a class="font-label-lg text-label-lg text-primary border-b-2 border-secondary pb-1 transition-all duration-200" href="#home">Home</a>
-<a class="font-label-lg text-label-lg text-on-surface-variant hover:text-primary transition-colors duration-300" href="#services">Services</a>
-<a class="font-label-lg text-label-lg text-on-surface-variant hover:text-primary transition-colors duration-300" href="#menu">Menu</a>
-<a class="font-label-lg text-label-lg text-on-surface-variant hover:text-primary transition-colors duration-300" href="#gallery">Gallery</a>
-<a class="font-label-lg text-label-lg text-on-surface-variant hover:text-primary transition-colors duration-300" href="#testimonials">Testimonials</a>
-<button class="ml-4 px-6 py-3 bg-secondary text-on-secondary-fixed font-label-lg rounded-lg shadow-md hover:bg-secondary/90 active:scale-95 transition-all">
-                    Book Now
-                </button>
-</div>
-<button class="md:hidden text-primary">
-<span class="material-symbols-outlined">menu</span>
-</button>
-</div>
+<nav id="main-nav" class="fixed top-0 w-full z-50 glass shadow-sm h-20 transition-all duration-300">
+  <div class="max-w-[1280px] mx-auto px-5 md:px-16 flex justify-between items-center h-full">
+    <!-- Logo -->
+    <a href="#home" class="font-display text-heading-md text-primary tracking-tight flex items-center gap-2">
+      <span class="w-10 h-10 rounded-full gradient-gold flex items-center justify-center text-primary font-bold text-lg">J</span>
+      Jaasiel
+    </a>
+    <!-- Desktop Nav -->
+    <div class="hidden md:flex gap-8 items-center">
+      <a class="nav-link font-body text-label-lg text-primary active" href="#home" data-section="home">Home</a>
+      <a class="nav-link font-body text-label-lg text-on-surface-variant hover:text-primary transition-colors duration-300" href="#services" data-section="services">Services</a>
+      <a class="nav-link font-body text-label-lg text-on-surface-variant hover:text-primary transition-colors duration-300" href="#menu" data-section="menu">Menu</a>
+      <a class="nav-link font-body text-label-lg text-on-surface-variant hover:text-primary transition-colors duration-300" href="#gallery" data-section="gallery">Gallery</a>
+      <a class="nav-link font-body text-label-lg text-on-surface-variant hover:text-primary transition-colors duration-300" href="#testimonials" data-section="testimonials">Testimonials</a>
+      <a href="#contact" class="ml-4 btn-gold px-6 py-3 rounded-xl text-label-lg inline-block">
+        Book Now
+      </a>
+    </div>
+    <!-- Mobile Menu Toggle -->
+    <button id="mobile-menu-btn" class="md:hidden text-primary w-10 h-10 flex items-center justify-center rounded-lg hover:bg-surface-container transition-colors" aria-label="Toggle menu">
+      <span class="material-symbols-outlined" id="menu-icon">menu</span>
+    </button>
+  </div>
+  <!-- Mobile Menu -->
+  <div id="mobile-menu" class="mobile-menu md:hidden bg-white/95 backdrop-blur-xl border-t border-outline-variant">
+    <div class="px-5 py-6 space-y-1">
+      <a class="block px-4 py-3 font-body text-body-md text-primary rounded-xl hover:bg-surface-container transition-colors" href="#home" onclick="closeMobileMenu()">Home</a>
+      <a class="block px-4 py-3 font-body text-body-md text-on-surface-variant rounded-xl hover:bg-surface-container transition-colors" href="#services" onclick="closeMobileMenu()">Services</a>
+      <a class="block px-4 py-3 font-body text-body-md text-on-surface-variant rounded-xl hover:bg-surface-container transition-colors" href="#menu" onclick="closeMobileMenu()">Menu</a>
+      <a class="block px-4 py-3 font-body text-body-md text-on-surface-variant rounded-xl hover:bg-surface-container transition-colors" href="#gallery" onclick="closeMobileMenu()">Gallery</a>
+      <a class="block px-4 py-3 font-body text-body-md text-on-surface-variant rounded-xl hover:bg-surface-container transition-colors" href="#testimonials" onclick="closeMobileMenu()">Testimonials</a>
+      <div class="pt-3">
+        <a href="#contact" onclick="closeMobileMenu()" class="block btn-gold text-center px-6 py-3 rounded-xl text-label-lg">
+          Book Now
+        </a>
+      </div>
+    </div>
+  </div>
 </nav>
+
 <main>
 <!-- Hero Section -->
 <section class="relative min-h-screen flex items-center pt-20 overflow-hidden" id="home">
-<div class="absolute inset-0 z-0">
-<div class="w-full h-full bg-cover bg-center brightness-75" data-alt="A cinematic, high-resolution overhead shot of a long, elegantly set dinner table at a luxury outdoor wedding. The scene features crystal glassware, gold-rimmed ceramic plates, and opulent floral arrangements in shades of cream and deep maroon. Warm, golden-hour sunlight filters through willow trees, creating a soft, romantic glow. The overall atmosphere is one of high-end hospitality and meticulous culinary presentation." style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuDHzz0SmIMhSJExpJpBW6cjNafUGU7NpAORN5mHhm5S4uXNkfAZRpcpI9bbgEszUU6vvHmUvegsr4AuPlgEbtPn_DiAc1tfhmUnWwdZfOQwpFlLq_x-NM09Fu1SuxPwYRkL5QIKWun4a6CaoDhI-MJKGKgeyVAev-kjiabwcJZYwybViIXhopDrgDq1mqfbIzBuj7NSkjE_nMwJ-HtnSKM75YbLDZoMhj6e8HYREbJu1YrKvYhj5bsryWnAQeo39gt9nZsNgs1PFjQ')"></div>
-</div>
-<div class="max-w-container-max mx-auto px-margin-desktop relative z-10 w-full">
-<div class="max-w-2xl bg-surface/40 backdrop-blur-sm p-8 md:p-12 rounded-xl shadow-2xl border border-white/20">
-<h1 class="font-headline-xl text-headline-xl text-primary mb-6">Exquisite Flavors, Unforgettable Moments</h1>
-<p class="font-body-lg text-body-lg text-on-surface mb-10 leading-relaxed">
-                        Redefining luxury catering with a touch of culinary artistry. From intimate gatherings to grand celebrations, we bring gourmet excellence to your table.
-                    </p>
-<div class="flex flex-col sm:flex-row gap-4">
-<button class="px-8 py-4 bg-secondary text-on-secondary-fixed font-label-lg rounded-lg shadow-lg hover:translate-y-[-2px] transition-all">
-                            Book Your Event
-                        </button>
-<button class="px-8 py-4 border-2 border-primary text-primary font-label-lg rounded-lg hover:bg-primary hover:text-white transition-all">
-                            Explore Menu
-                        </button>
-</div>
-</div>
-</div>
+  <div class="absolute inset-0 z-0">
+    <div class="w-full h-full bg-cover bg-center" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuDHzz0SmIMhSJExpJpBW6cjNafUGU7NpAORN5mHhm5S4uXNkfAZRpcpI9bbgEszUU6vvHmUvegsr4AuPlgEbtPn_DiAc1tfhmUnWwdZfOQwpFlLq_x-NM09Fu1SuxPwYRkL5QIKWun4a6CaoDhI-MJKGKgeyVAev-kjiabwcJZYwybViIXhopDrgDq1mqfbIzBuj7NSkjE_nMwJ-HtnSKM75YbLDZoMhj6e8HYREbJu1YrKvYhj5bsryWnAQeo39gt9nZsNgs1PFjQ')">
+    </div>
+    <!-- Dark overlay for readability -->
+    <div class="absolute inset-0 bg-gradient-to-r from-[#1a1a2e]/80 via-[#1a1a2e]/50 to-transparent"></div>
+  </div>
+  <div class="max-w-[1280px] mx-auto px-5 md:px-16 relative z-10 w-full">
+    <div class="max-w-2xl">
+      <!-- Gold accent bar -->
+      <div class="gold-separator mb-8"></div>
+      <h1 class="font-display text-hero-mobile md:text-hero-desktop text-white mb-6 leading-tight">
+        Exquisite Flavors, Unforgettable Moments
+      </h1>
+      <p class="font-body text-body-lg text-white/80 mb-10 leading-relaxed max-w-lg">
+        Redefining luxury catering with a touch of culinary artistry. From intimate gatherings to grand celebrations, we bring gourmet excellence to your table.
+      </p>
+      <div class="flex flex-col sm:flex-row gap-4">
+        <a href="#contact" class="btn-gold px-8 py-4 rounded-xl text-label-lg text-center">
+          Book Your Event
+        </a>
+        <a href="#menu" class="btn-outline border-white/40 text-white hover:bg-white hover:text-primary px-8 py-4 rounded-xl text-label-lg text-center backdrop-blur-sm">
+          Explore Menu
+        </a>
+      </div>
+      <!-- Trust badges -->
+      <div class="flex flex-wrap gap-6 mt-12 pt-8 border-t border-white/10">
+        <div class="text-center">
+          <div class="font-display text-heading-sm text-secondary">500+</div>
+          <div class="text-label-sm text-white/60 uppercase tracking-wider">Events</div>
+        </div>
+        <div class="text-center">
+          <div class="font-display text-heading-sm text-secondary">15+</div>
+          <div class="text-label-sm text-white/60 uppercase tracking-wider">Chefs</div>
+        </div>
+        <div class="text-center">
+          <div class="font-display text-heading-sm text-secondary">98%</div>
+          <div class="text-label-sm text-white/60 uppercase tracking-wider">Satisfaction</div>
+        </div>
+      </div>
+    </div>
+  </div>
 </section>
+
 <!-- About Section -->
-<section class="py-section-gap bg-background">
-<div class="max-w-container-max mx-auto px-margin-desktop grid md:grid-cols-2 gap-gutter items-center">
-<div class="signature-image-frame">
-<img class="w-full aspect-[4/5] object-cover rounded-lg shadow-lg" data-alt="A professional close-up of a chef's hands meticulously garnishing a gourmet lamb dish with microgreens and a drizzle of gold-flecked sauce. The background is a clean, modern stainless steel professional kitchen with soft bokeh. The lighting is focused and warm, highlighting the textures of the perfectly seared meat and vibrant ingredients, reflecting a commitment to culinary excellence and meticulous detail." src="https://lh3.googleusercontent.com/aida-public/AB6AXuASr-vfn2-5qQFQkGBusQUP-yFWDsfwShyGSR9FM87enwNXgvNC--jxBnGFSdKMY40fbrBQhz1vepbYPWF_oL1CIMAt-z14lG8pFJKMT4r-Qoc4zyZ9NW5IDj-h8cEgtiFOKbngOV2XRWfUna4aryT7Qy3YXQ57hLuust9feH08axjKKmVIiQy1IU-X3CE9DBMDEwXG4sbDRfrEr-VLrvp5Ssi290VjdyuTeDDuFdi_E_gSZXMfptV6t3eC74K20m9WqbtbiUfQe8Q"/>
-</div>
-<div class="space-y-8 pl-0 md:pl-12">
-<span class="font-label-lg text-secondary tracking-widest uppercase">Our Story</span>
-<h2 class="font-headline-lg text-headline-lg text-primary">A Legacy of Taste and Sophistication</h2>
-<p class="font-body-lg text-body-lg text-on-surface-variant leading-relaxed">
-                        At Jaasiel Catering Service, we believe that every event is a canvas for exceptional culinary art. Founded on the principles of quality, elegance, and personalized service, we have curated unforgettable dining experiences for over a decade.
-                    </p>
-<p class="font-body-lg text-body-lg text-on-surface-variant leading-relaxed">
-                        Our team of master chefs selects only the finest seasonal ingredients, transforming them into signature dishes that delight the senses. We don't just serve food; we craft memories that linger long after the final course.
-                    </p>
-<div class="grid grid-cols-2 gap-8 pt-4">
-<div>
-<div class="font-headline-md text-secondary">500+</div>
-<div class="font-label-sm text-on-surface-variant uppercase tracking-tighter">Events Hosted</div>
-</div>
-<div>
-<div class="font-headline-md text-secondary">15+</div>
-<div class="font-label-sm text-on-surface-variant uppercase tracking-tighter">Master Chefs</div>
-</div>
-</div>
-</div>
-</div>
+<section class="py-20 md:py-32 bg-background">
+  <div class="max-w-[1280px] mx-auto px-5 md:px-16 grid md:grid-cols-2 gap-10 md:gap-16 items-center">
+    <div class="signature-image-frame reveal">
+      <img class="w-full aspect-[4/5] object-cover rounded-xl shadow-2xl" alt="Chef meticulously garnishing a gourmet dish" src="https://lh3.googleusercontent.com/aida-public/AB6AXuASr-vfn2-5qQFQkGBusQUP-yFWDsfwShyGSR9FM87enwNXgvNC--jxBnGFSdKMY40fbrBQhz1vepbYPWF_oL1CIMAt-z14lG8pFJKMT4r-Qoc4zyZ9NW5IDj-h8cEgtiFOKbngOV2XRWfUna4aryT7Qy3YXQ57hLuust9feH08axjKKmVIiQy1IU-X3CE9DBMDEwXG4sbDRfrEr-VLrvp5Ssi290VjdyuTeDDuFdi_E_gSZXMfptV6t3eC74K20m9WqbtbiUfQe8Q"/>
+    </div>
+    <div class="space-y-6 md:space-y-8 pl-0 md:pl-4 reveal">
+      <div>
+        <span class="font-body text-label-lg text-secondary tracking-widest uppercase">Our Story</span>
+        <div class="gold-separator mt-3"></div>
+      </div>
+      <h2 class="font-display text-heading-lg-mobile md:text-heading-lg text-primary">A Legacy of Taste and Sophistication</h2>
+      <p class="font-body text-body-lg text-on-surface-variant leading-relaxed">
+        At Jaasiel Catering Service, we believe that every event is a canvas for exceptional culinary art. Founded on the principles of quality, elegance, and personalized service, we have curated unforgettable dining experiences for over a decade.
+      </p>
+      <p class="font-body text-body-lg text-on-surface-variant leading-relaxed">
+        Our team of master chefs selects only the finest seasonal ingredients, transforming them into signature dishes that delight the senses. We don't just serve food; we craft memories that linger long after the final course.
+      </p>
+      <div class="grid grid-cols-2 gap-6 md:gap-8 pt-4">
+        <div class="p-4 bg-surface-container rounded-xl text-center md:text-left">
+          <div class="font-display text-heading-md text-secondary">500+</div>
+          <div class="font-body text-label-sm text-on-surface-variant uppercase tracking-wider">Events Hosted</div>
+        </div>
+        <div class="p-4 bg-surface-container rounded-xl text-center md:text-left">
+          <div class="font-display text-heading-md text-secondary">15+</div>
+          <div class="font-body text-label-sm text-on-surface-variant uppercase tracking-wider">Master Chefs</div>
+        </div>
+      </div>
+    </div>
+  </div>
 </section>
+
 <!-- Services Section -->
-<section class="py-section-gap bg-surface-container-low" id="services">
-<div class="max-w-container-max mx-auto px-margin-desktop">
-<div class="text-center mb-16">
-<h2 class="font-headline-lg text-headline-lg text-primary mb-4">Tailored Catering Experiences</h2>
-<p class="font-body-lg text-body-lg text-on-surface-variant max-w-2xl mx-auto">Providing world-class culinary services tailored to the unique atmosphere of your celebration.</p>
-</div>
-<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-<!-- Weddings -->
-<div class="group bg-white p-2 rounded-xl shadow-sm hover:shadow-xl transition-all duration-500 overflow-hidden">
-<div class="overflow-hidden rounded-lg h-64 mb-6">
-<img class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700" data-alt="A romantic wedding reception buffet featuring tiered seafood displays, artisanal breads, and elegant hors d'oeuvres. The setting is bright and ethereal with white linens and soft candlelight. The composition focuses on the variety and luxury of the spread, emphasizing a sophisticated and celebratory mood." src="https://lh3.googleusercontent.com/aida-public/AB6AXuC-QrtN7Z__mU8_Xv8hcm-j4hs4yUAO-KRui2xrQSbTvQDf1Kw_5XuDbHcgBXMGxVBF-lseqzufpbBRZpzyi0F30s1zcWouAn_AkwxdKQdqyQ2EFfLFRyQ60WPSfrKJArT_HXm6dsyp3XWKZifYsXNLaHkhpzI9g8JizO9QBHVF36iJeF134G9vb-y32WZ5_4uuxM6eTy_xy9bNFJ0NJkCaGMsotcxnb4yX3TLp3qZPScy2f4RYLr2gQBXU-_ReHqdZ9BfxiSXHbP4"/>
-</div>
-<div class="p-4 space-y-3">
-<h3 class="font-headline-md text-2xl text-primary">Weddings</h3>
-<p class="font-body-md text-on-surface-variant">Bespoke menus that reflect your love story, from formal banquets to chic cocktail hours.</p>
-<a class="inline-flex items-center text-secondary font-label-lg group-hover:gap-2 transition-all" href="#">
-                                Learn More <span class="material-symbols-outlined text-sm ml-1">arrow_forward</span>
-</a>
-</div>
-</div>
-<!-- Corporate Events -->
-<div class="group bg-white p-2 rounded-xl shadow-sm hover:shadow-xl transition-all duration-500 overflow-hidden">
-<div class="overflow-hidden rounded-lg h-64 mb-6">
-<img class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700" data-alt="A modern corporate lunch catering setup with sleek bento boxes and healthy gourmet salads. The setting is a minimalist, professional boardroom with glass walls and natural light. The food is arranged with precision and clean lines, reflecting a professional, high-end business aesthetic." src="https://lh3.googleusercontent.com/aida-public/AB6AXuA5bZUYC1ZELluD3cRmYOR7KBNQ8Xr0JpT0_mXAA-4ybHC0z9Ij94G5RRiiQI73BgTFnkomJkQ7rUQxLijw2nbTFsqbMT-DJebT6xi8KQ9WZUiWwsfOOqzweHP3dxL0JApYZvfFwhXepHpPaFV30XJWCJiJmfc_uQs1bs51cKjI-27rnF9Dw10lRsBVpsl5EOjmglFYaQskBFmBQxHxeHEMePDzkNKNymjZNt6J9804R7kEc-OdVfr9DPNDyPrSucMKD_GLFOvoEuY"/>
-</div>
-<div class="p-4 space-y-3">
-<h3 class="font-headline-md text-2xl text-primary">Corporate</h3>
-<p class="font-body-md text-on-surface-variant">Professional catering for board meetings, product launches, and gala dinners that impress.</p>
-<a class="inline-flex items-center text-secondary font-label-lg group-hover:gap-2 transition-all" href="#">
-                                Learn More <span class="material-symbols-outlined text-sm ml-1">arrow_forward</span>
-</a>
-</div>
-</div>
-<!-- Birthdays -->
-<div class="group bg-white p-2 rounded-xl shadow-sm hover:shadow-xl transition-all duration-500 overflow-hidden">
-<div class="overflow-hidden rounded-lg h-64 mb-6">
-<img class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700" data-alt="A vibrant and playful luxury birthday party food station with colorful sliders, specialty cocktails, and gourmet appetizers. The decor includes elegant balloons and warm ambient lighting. The atmosphere is joyful and upscale, focusing on fun yet refined culinary offerings." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCzd0dlLrADvdtflJz7A9Q7-u-cTsw393YBMlUPbH4NVaOWs9BwBmQ4sjlYbvj8flacQ7l8P0hAPGT7RsdjqrHC7qle1JhDC7TiHYZ32rokHQCkpPadYOEO1aTerA5I40HkbYIrn1K0IgZOpEZpHAa-my1ARWTdBLTLNWP6oFG6VZyIjY0DHrCH8NDodY7RrbJ1_so3MT4i_zCrVGph_WKx9C1HB0e0gx5Na6pY6lGe2XxW6lD4Pmb3EV_AkJb3MwJEYexpMQeNWj0"/>
-</div>
-<div class="p-4 space-y-3">
-<h3 class="font-headline-md text-2xl text-primary">Private Parties</h3>
-<p class="font-body-md text-on-surface-variant">Intimate celebrations enhanced by creative menus and attentive, discreet service.</p>
-<a class="inline-flex items-center text-secondary font-label-lg group-hover:gap-2 transition-all" href="#">
-                                Learn More <span class="material-symbols-outlined text-sm ml-1">arrow_forward</span>
-</a>
-</div>
-</div>
-<!-- Custom Menus -->
-<div class="group bg-white p-2 rounded-xl shadow-sm hover:shadow-xl transition-all duration-500 overflow-hidden">
-<div class="overflow-hidden rounded-lg h-64 mb-6">
-<img class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700" data-alt="A chef presenting a unique, custom-designed dish to guests at a private table. The dish is a work of edible art with exotic ingredients and artistic plating. The lighting is dramatic and moody, emphasizing exclusivity and the bespoke nature of the menu design." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCEJfEc7OOOx0ShWd0Z9FbVZoMc_4qKQHKsnY_1J4PMPowe82DtnxHi34BzLRQ1RKBc0_9B49CP_w_ZiUEe_4kYwDVwTblVh9MBmLi8YbiTub7y5vB5vyjybhzfQ7LsdwRGZWMvMqe8yWI8eozBzNUH0xYkncBfpUyPG5Aj5JpTdxNoqEkBRLh1OnTSVMiCCcmb_Jb2xYxG6FsU314bSA1Lzmpy54H9l1yfqbrpQ-50qbwzc2uD0TxQ5MsZKeSzac6_M3LjR9ZuAcA"/>
-</div>
-<div class="p-4 space-y-3">
-<h3 class="font-headline-md text-2xl text-primary">Custom Menus</h3>
-<p class="font-body-md text-on-surface-variant">Personalized culinary journeys crafted specifically to meet your dietary needs and tastes.</p>
-<a class="inline-flex items-center text-secondary font-label-lg group-hover:gap-2 transition-all" href="#">
-                                Learn More <span class="material-symbols-outlined text-sm ml-1">arrow_forward</span>
-</a>
-</div>
-</div>
-</div>
-</div>
+<section class="py-20 md:py-32 bg-surface-container-low" id="services">
+  <div class="max-w-[1280px] mx-auto px-5 md:px-16">
+    <div class="text-center mb-12 md:mb-16 reveal">
+      <span class="font-body text-label-lg text-secondary tracking-widest uppercase">What We Offer</span>
+      <h2 class="font-display text-heading-lg-mobile md:text-heading-lg text-primary mb-4 mt-3">Tailored Catering Experiences</h2>
+      <div class="gold-separator mx-auto mb-6"></div>
+      <p class="font-body text-body-lg text-on-surface-variant max-w-2xl mx-auto">Providing world-class culinary services tailored to the unique atmosphere of your celebration.</p>
+    </div>
+    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 md:gap-8 stagger-children">
+      <!-- Weddings -->
+      <div class="service-card group bg-white p-2 rounded-2xl shadow-sm overflow-hidden">
+        <div class="overflow-hidden rounded-xl h-56 md:h-64 mb-5">
+          <img class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700" alt="Romantic wedding reception buffet" src="https://lh3.googleusercontent.com/aida-public/AB6AXuC-QrtN7Z__mU8_Xv8hcm-j4hs4yUAO-KRui2xrQSbTvQDf1Kw_5XuDbHcgBXMGxVBF-lseqzufpbBRZpzyi0F30s1zcWouAn_AkwxdKQdqyQ2EFfLFRyQ60WPSfrKJArT_HXm6dsyp3XWKZifYsXNLaHkhpzI9g8JizO9QBHVF36iJeF134G9vb-y32WZ5_4uuxM6eTy_xy9bNFJ0NJkCaGMsotcxnb4yX3TLp3qZPScy2f4RYLr2gQBXU-_ReHqdZ9BfxiSXHbP4"/>
+        </div>
+        <div class="p-4 space-y-3">
+          <h3 class="font-display text-heading-sm text-primary">Weddings</h3>
+          <p class="font-body text-body-md text-on-surface-variant">Bespoke menus that reflect your love story, from formal banquets to chic cocktail hours.</p>
+          <a class="inline-flex items-center text-secondary font-body text-label-lg group-hover:gap-2 transition-all" href="#">
+            Learn More <span class="material-symbols-outlined text-sm ml-1">arrow_forward</span>
+          </a>
+        </div>
+      </div>
+      <!-- Corporate Events -->
+      <div class="service-card group bg-white p-2 rounded-2xl shadow-sm overflow-hidden">
+        <div class="overflow-hidden rounded-xl h-56 md:h-64 mb-5">
+          <img class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700" alt="Modern corporate lunch catering" src="https://lh3.googleusercontent.com/aida-public/AB6AXuA5bZUYC1ZELluD3cRmYOR7KBNQ8Xr0JpT0_mXAA-4ybHC0z9Ij94G5RRiiQI73BgTFnkomJkQ7rUQxLijw2nbTFsqbMT-DJebT6xi8KQ9WZUiWwsfOOqzweHP3dxL0JApYZvfFwhXepHpPaFV30XJWCJiJmfc_uQs1bs51cKjI-27rnF9Dw10lRsBVpsl5EOjmglFYaQskBFmBQxHxeHEMePDzkNKNymjZNt6J9804R7kEc-OdVfr9DPNDyPrSucMKD_GLFOvoEuY"/>
+        </div>
+        <div class="p-4 space-y-3">
+          <h3 class="font-display text-heading-sm text-primary">Corporate</h3>
+          <p class="font-body text-body-md text-on-surface-variant">Professional catering for board meetings, product launches, and gala dinners that impress.</p>
+          <a class="inline-flex items-center text-secondary font-body text-label-lg group-hover:gap-2 transition-all" href="#">
+            Learn More <span class="material-symbols-outlined text-sm ml-1">arrow_forward</span>
+          </a>
+        </div>
+      </div>
+      <!-- Private Parties -->
+      <div class="service-card group bg-white p-2 rounded-2xl shadow-sm overflow-hidden">
+        <div class="overflow-hidden rounded-xl h-56 md:h-64 mb-5">
+          <img class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700" alt="Luxury birthday party food station" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCzd0dlLrADvdtflJz7A9Q7-u-cTsw393YBMlUPbH4NVaOWs9BwBmQ4sjlYbvj8flacQ7l8P0hAPGT7RsdjqrHC7qle1JhDC7TiHYZ32rokHQCkpPadYOEO1aTerA5I40HkbYIrn1K0IgZOpEZpHAa-my1ARWTdBLTLNWP6oFG6VZyIjY0DHrCH8NDodY7RrbJ1_so3MT4i_zCrVGph_WKx9C1HB0e0gx5Na6pY6lGe2XxW6lD4Pmb3EV_AkJb3MwJEYexpMQeNWj0"/>
+        </div>
+        <div class="p-4 space-y-3">
+          <h3 class="font-display text-heading-sm text-primary">Private Parties</h3>
+          <p class="font-body text-body-md text-on-surface-variant">Intimate celebrations enhanced by creative menus and attentive, discreet service.</p>
+          <a class="inline-flex items-center text-secondary font-body text-label-lg group-hover:gap-2 transition-all" href="#">
+            Learn More <span class="material-symbols-outlined text-sm ml-1">arrow_forward</span>
+          </a>
+        </div>
+      </div>
+      <!-- Custom Menus -->
+      <div class="service-card group bg-white p-2 rounded-2xl shadow-sm overflow-hidden">
+        <div class="overflow-hidden rounded-xl h-56 md:h-64 mb-5">
+          <img class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700" alt="Chef presenting a custom-designed dish" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCEJfEc7OOOx0ShWd0Z9FbVZoMc_4qKQHKsnY_1J4PMPowe82DtnxHi34BzLRQ1RKBc0_9B49CP_w_ZiUEe_4kYwDVwTblVh9MBmLi8YbiTub7y5vB5vyjybhzfQ7LsdwRGZWMvMqe8yWI8eozBzNUH0xYkncBfpUyPG5Aj5JpTdxNoqEkBRLh1OnTSVMiCCcmb_Jb2xYxG6FsU314bSA1Lzmpy54H9l1yfqbrpQ-50qbwzc2uD0TxQ5MsZKeSzac6_M3LjR9ZuAcA"/>
+        </div>
+        <div class="p-4 space-y-3">
+          <h3 class="font-display text-heading-sm text-primary">Custom Menus</h3>
+          <p class="font-body text-body-md text-on-surface-variant">Personalized culinary journeys crafted specifically to meet your dietary needs and tastes.</p>
+          <a class="inline-flex items-center text-secondary font-body text-label-lg group-hover:gap-2 transition-all" href="#">
+            Learn More <span class="material-symbols-outlined text-sm ml-1">arrow_forward</span>
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
 </section>
+
 <!-- Featured Menu Section -->
-<section class="py-section-gap" id="menu">
-<div class="max-w-container-max mx-auto px-margin-desktop">
-<div class="flex flex-col md:flex-row justify-between items-end mb-16 gap-6">
-<div class="max-w-xl">
-<h2 class="font-headline-lg text-headline-lg text-primary mb-4">Signature Creations</h2>
-<p class="font-body-lg text-body-lg text-on-surface-variant">A glimpse into our seasonal menu featuring chef-recommended masterpieces that define luxury dining.</p>
-</div>
-<button class="px-8 py-3 bg-primary text-white rounded-lg hover:bg-primary-container transition-all">View Full Menu</button>
-</div>
-<div class="space-y-2 border-t border-primary/10">
-<!-- Menu Item 1 -->
-<div class="menu-item-row group flex flex-col md:flex-row items-center justify-between py-10 px-8 transition-colors duration-300 rounded-lg">
-<div class="flex flex-col md:flex-row items-center gap-8 mb-4 md:mb-0">
-<img class="w-32 h-32 rounded-full object-cover shadow-md border-2 border-white" data-alt="Close up of Braised Lamb Shank served on a bed of truffle-infused creamy polenta, garnished with roasted root vegetables and a rich red wine reduction. High-end plating on a dark ceramic dish, lit with soft side-lighting to highlight the tender texture of the meat and the sheen of the sauce. Elegant and rich aesthetic." src="https://lh3.googleusercontent.com/aida-public/AB6AXuA97lvradb9mloFQ9qhCFNAm4pEcb0fCH5FsHFVoubanquCeJRnBFKSNMDbXuwb3B1Y-OtDnyeBUYQfZAw-HpJ3z5gaZ-7Tg1VfCiKohfmuueHZnbEjGPOKbNOi1rR3EIVSejjJp7e8-dO4zJbGGlpC3PHZ9z05GMwBVKzloLRZXK33H8kqjszpp2tqY5Ya3Inh2Rvl_dX9uqtgH7NWbfu2OUeRSAOfVu3NdQJbdj-ca68knxA-QoEBG3Dw5znT2aDC7cGm2XJVXdo"/>
-<div>
-<h4 class="font-headline-md text-2xl text-primary mb-1">Braised Lamb Shank</h4>
-<p class="font-body-md text-on-surface-variant">Slow-cooked for 12 hours in a rich red wine jus with truffle polenta.</p>
-<div class="mt-2 flex gap-2">
-<span class="px-3 py-1 bg-secondary-fixed text-on-secondary-fixed text-label-sm rounded-full">Gluten-Free</span>
-</div>
-</div>
-</div>
-<div class="font-headline-md text-3xl text-primary font-bold">$42</div>
-</div>
-<!-- Menu Item 2 -->
-<div class="menu-item-row group flex flex-col md:flex-row items-center justify-between py-10 px-8 transition-colors duration-300 rounded-lg">
-<div class="flex flex-col md:flex-row items-center gap-8 mb-4 md:mb-0">
-<img class="w-32 h-32 rounded-full object-cover shadow-md border-2 border-white" data-alt="Gourmet Gold-Leaf Dessert Platter featuring mini chocolate ganache tarts, saffron-infused macaroons, and champagne-poached pears. Every dessert is delicately adorned with edible gold leaf and fresh edible flowers. The platter is made of white marble, and the lighting is bright and luxurious, highlighting the shimmer of the gold." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAKi0-t-DwqlE1o9O0Mf6ZbIY05sEv7uOPEzhcfpGXK5jtbcJ--5C60jaUTQHbNF5LkN0zGHpqkuj10fN4kFf3AdGItJ2wuupZc1Yl33NVzV8maCHNzQFcLwKS5EyDxbAwcQP4HWSptDP_sUD8naNgkx1Ix2sB9ssOUj1pENIIfaFlQT3E0aEvD9mACm_to37Isx_Kb0xZTe66d1QvQTrdOoUHmRAyRQtpMKwhBAN9KpqYFleBzCDtd3HjJGJtamFIkP8lNUJBRmtc"/>
-<div>
-<h4 class="font-headline-md text-2xl text-primary mb-1">Gold-Leaf Dessert Platter</h4>
-<p class="font-body-md text-on-surface-variant">A selection of artisanal tarts, macarons, and mousses finished with 24k edible gold.</p>
-<div class="mt-2 flex gap-2">
-<span class="px-3 py-1 bg-secondary-fixed text-on-secondary-fixed text-label-sm rounded-full">Signature</span>
-</div>
-</div>
-</div>
-<div class="font-headline-md text-3xl text-primary font-bold">$35</div>
-</div>
-<!-- Menu Item 3 -->
-<div class="menu-item-row group flex flex-col md:flex-row items-center justify-between py-10 px-8 transition-colors duration-300 rounded-lg">
-<div class="flex flex-col md:flex-row items-center gap-8 mb-4 md:mb-0">
-<img class="w-32 h-32 rounded-full object-cover shadow-md border-2 border-white" data-alt="Plate of Saffron-Infused Lobster Risotto with seared scallops and a light lemon-zest foam. Plated in a wide-rimmed porcelain bowl, showing the vibrant yellow of the saffron and the perfectly cooked seafood. The aesthetic is clean, minimalist, and very high-end, evoking the feeling of a Michelin-star restaurant." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCIMFeKceeoTLiz3OLUCVyMd_pRjLLWc0zkiXAvBN8vnp9I8wOWfaCm7tMQ6BziErJEyNYL8exZtq_cHeALP7zYot2zg5yvoj5oYGIwb-ZEZkVFZTdgsv5MNeEFkHy-yotpnTQjLPTu2ibztVAQgLCKnUxRq2hWcV5-4poB89TR5cnjMWLcytSMfj0KQotgyJPhzsreP8j7L1tC-_D9CEdoPjLjzIcFgqqEjabn4zhDsOFycYNUpQoXVqOtoSRr9A70HA5pyMQpybg"/>
-<div>
-<h4 class="font-headline-md text-2xl text-primary mb-1">Saffron Lobster Risotto</h4>
-<p class="font-body-md text-on-surface-variant">Acquerello rice, poached lobster tail, and hand-picked saffron threads.</p>
-<div class="mt-2 flex gap-2">
-<span class="px-3 py-1 bg-secondary-fixed text-on-secondary-fixed text-label-sm rounded-full">Seafood</span>
-</div>
-</div>
-</div>
-<div class="font-headline-md text-3xl text-primary font-bold">$48</div>
-</div>
-</div>
-</div>
+<section class="py-20 md:py-32" id="menu">
+  <div class="max-w-[1280px] mx-auto px-5 md:px-16">
+    <div class="flex flex-col md:flex-row justify-between items-start md:items-end mb-12 md:mb-16 gap-6 reveal">
+      <div class="max-w-xl">
+        <span class="font-body text-label-lg text-secondary tracking-widest uppercase">Curated Selection</span>
+        <h2 class="font-display text-heading-lg-mobile md:text-heading-lg text-primary mb-4 mt-3">Signature Creations</h2>
+        <div class="gold-separator mb-4"></div>
+        <p class="font-body text-body-lg text-on-surface-variant">A glimpse into our seasonal menu featuring chef-recommended masterpieces that define luxury dining.</p>
+      </div>
+      <a href="#" class="btn-gold px-8 py-3 rounded-xl text-label-lg shrink-0">View Full Menu</a>
+    </div>
+    <div class="space-y-3 border-t-2 border-primary/10">
+      <!-- Menu Item 1 -->
+      <div class="menu-item-row group flex flex-col md:flex-row items-center justify-between py-8 md:py-10 px-4 md:px-8 transition-all duration-300 rounded-xl reveal">
+        <div class="flex flex-col md:flex-row items-center gap-5 md:gap-8 mb-4 md:mb-0 text-center md:text-left">
+          <img class="w-24 h-24 md:w-32 md:h-32 rounded-full object-cover shadow-lg border-3 border-secondary/20 group-hover:border-secondary/60 transition-all" alt="Braised Lamb Shank" src="https://lh3.googleusercontent.com/aida-public/AB6AXuA97lvradb9mloFQ9qhCFNAm4pEcb0fCH5FsHFVoubanquCeJRnBFKSNMDbXuwb3B1Y-OtDnyeBUYQfZAw-HpJ3z5gaZ-7Tg1VfCiKohfmuueHZnbEjGPOKbNOi1rR3EIVSejjJp7e8-dO4zJbGGlpC3PHZ9z05GMwBVKzloLRZXK33H8kqjszpp2tqY5Ya3Inh2Rvl_dX9uqtgH7NWbfu2OUeRSAOfVu3NdQJbdj-ca68knxA-QoEBG3Dw5znT2aDC7cGm2XJVXdo"/>
+          <div>
+            <h4 class="font-display text-xl md:text-2xl text-primary mb-1">Braised Lamb Shank</h4>
+            <p class="font-body text-body-md text-on-surface-variant">Slow-cooked for 12 hours in a rich red wine jus with truffle polenta.</p>
+            <div class="mt-2 flex gap-2 justify-center md:justify-start">
+              <span class="px-3 py-1 bg-secondary-fixed text-on-secondary-container text-label-sm rounded-full font-body">Gluten-Free</span>
+            </div>
+          </div>
+        </div>
+        <div class="font-display text-2xl md:text-3xl text-secondary font-bold">₹42</div>
+      </div>
+      <!-- Menu Item 2 -->
+      <div class="menu-item-row group flex flex-col md:flex-row items-center justify-between py-8 md:py-10 px-4 md:px-8 transition-all duration-300 rounded-xl reveal">
+        <div class="flex flex-col md:flex-row items-center gap-5 md:gap-8 mb-4 md:mb-0 text-center md:text-left">
+          <img class="w-24 h-24 md:w-32 md:h-32 rounded-full object-cover shadow-lg border-3 border-secondary/20 group-hover:border-secondary/60 transition-all" alt="Gold-Leaf Dessert Platter" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAKi0-t-DwqlE1o9O0Mf6ZbIY05sEv7uOPEzhcfpGXK5jtbcJ--5C60jaUTQHbNF5LkN0zGHpqkuj10fN4kFf3AdGItJ2wuupZc1Yl33NVzV8maCHNzQFcLwKS5EyDxbAwcQP4HWSptDP_sUD8naNgkx1Ix2sB9ssOUj1pENIIfaFlQT3E0aEvD9mACm_to37Isx_Kb0xZTe66d1QvQTrdOoUHmRAyRQtpMKwhBAN9KpqYFleBzCDtd3HjJGJtamFIkP8lNUJBRmtc"/>
+          <div>
+            <h4 class="font-display text-xl md:text-2xl text-primary mb-1">Gold-Leaf Dessert Platter</h4>
+            <p class="font-body text-body-md text-on-surface-variant">A selection of artisanal tarts, macarons, and mousses finished with 24k edible gold.</p>
+            <div class="mt-2 flex gap-2 justify-center md:justify-start">
+              <span class="px-3 py-1 bg-secondary-fixed text-on-secondary-container text-label-sm rounded-full font-body">Signature</span>
+            </div>
+          </div>
+        </div>
+        <div class="font-display text-2xl md:text-3xl text-secondary font-bold">₹35</div>
+      </div>
+      <!-- Menu Item 3 -->
+      <div class="menu-item-row group flex flex-col md:flex-row items-center justify-between py-8 md:py-10 px-4 md:px-8 transition-all duration-300 rounded-xl reveal">
+        <div class="flex flex-col md:flex-row items-center gap-5 md:gap-8 mb-4 md:mb-0 text-center md:text-left">
+          <img class="w-24 h-24 md:w-32 md:h-32 rounded-full object-cover shadow-lg border-3 border-secondary/20 group-hover:border-secondary/60 transition-all" alt="Saffron Lobster Risotto" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCIMFeKceeoTLiz3OLUCVyMd_pRjLLWc0zkiXAvBN8vnp9I8wOWfaCm7tMQ6BziErJEyNYL8exZtq_cHeALP7zYot2zg5yvoj5oYGIwb-ZEZkVFZTdgsv5MNeEFkHy-yotpnTQjLPTu2ibztVAQgLCKnUxRq2hWcV5-4poB89TR5cnjMWLcytSMfj0KQotgyJPhzsreP8j7L1tC-_D9CEdoPjLjzIcFgqqEjabn4zhDsOFycYNUpQoXVqOtoSRr9A70HA5pyMQpybg"/>
+          <div>
+            <h4 class="font-display text-xl md:text-2xl text-primary mb-1">Saffron Lobster Risotto</h4>
+            <p class="font-body text-body-md text-on-surface-variant">Acquerello rice, poached lobster tail, and hand-picked saffron threads.</p>
+            <div class="mt-2 flex gap-2 justify-center md:justify-start">
+              <span class="px-3 py-1 bg-secondary-fixed text-on-secondary-container text-label-sm rounded-full font-body">Seafood</span>
+            </div>
+          </div>
+        </div>
+        <div class="font-display text-2xl md:text-3xl text-secondary font-bold">₹48</div>
+      </div>
+    </div>
+  </div>
 </section>
+
 <!-- Gallery Section -->
-<section class="py-section-gap bg-surface" id="gallery">
-<div class="max-w-container-max mx-auto px-margin-desktop">
-<div class="text-center mb-16">
-<h2 class="font-headline-lg text-headline-lg text-primary">Visual Elegance</h2>
-<p class="font-body-lg text-body-lg text-on-surface-variant">Capturing the beauty of our events and the artistry of our cuisine.</p>
-</div>
-<div class="grid grid-cols-1 md:grid-cols-3 gap-6">
-<div class="space-y-6">
-<img class="w-full rounded-xl object-cover h-64 hover:opacity-90 transition-opacity" data-alt="A macro shot of colorful, bite-sized hors d'oeuvres on a sleek black tray. The food is exquisitely decorated with tiny herbs and flowers. Shallow depth of field with a focus on the intricate textures and vibrant colors. Sophisticated and appetizer-focused." src="https://lh3.googleusercontent.com/aida-public/AB6AXuADhy1E4Yum1zO0Oewx-yeunWDmgWGkUUeVixYxM9j_3zIZmsbYU4-MRVp_rukjvTjbeQtsRr3jcCDI-7-YcIykWCBcBWx7yox--go2zFTPNVdliolzo2lF-HLiMhVsptOmjOTQYCpg_mSAxkV1och5XNNm_ZTNrnehpcX0uanSE7pRISzPGpefjQRR77txijo-ng0z5qAx7XblFExJdzpokGE1gXahZeg0-PyyyCjCr2chxPhWUPCKZ_sHEnF4PMSc9JrpNi1J6N4"/>
-<img class="w-full rounded-xl object-cover h-96 hover:opacity-90 transition-opacity" data-alt="A wide view of a luxury rooftop cocktail party during sunset. Guests in elegant attire are seen mingling with champagne glasses. The lighting is warm and golden, with the city skyline blurred in the background. High-society and exclusive social mood." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBAgBmlTSLElNkyGl1xL8dTrdDO479nBULmtnLrYhKvdtu8sjk8eP7Vy3geuL4PLXhmi8L8fb1FtZRdcF_3zER_S-7uNqUgrwjRDxWjL22pQ9LnBk42yMWHpW_THqY4-Wi3vAe1bEfZKsjXy7LqTem4cXi7uFzAnkmt32prskabHGdAojqnNmm7amllxa1081iPEKLTuGw24H97Z4ZlIt1rgy2mA4tzVD2hDo05Pd6dpoZa3tNQ9lvkHGAvqyimrDbUE7vzGX_UeSU"/>
-</div>
-<div class="space-y-6">
-<img class="w-full rounded-xl object-cover h-[500px] hover:opacity-90 transition-opacity" data-alt="A beautifully styled grazing table featuring various artisanal cheeses, cured meats, fresh figs, honeycomb, and rustic breads. The table is decorated with eucalyptus branches and vintage wooden boards. The lighting is natural and soft, creating a warm, inviting, and organic atmosphere." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAP2nKtfrxv74QT9TviOTuY_JpRnQpHpWAm8GA1D55PFZvoEgjyhGtmgtzettVIMMNJxZjGMskCivOo6JRLiySkEkZAk9iBjJoZ5QjN2oKP-Iy7NUP9pQpzcktgUf4lZRvoCtmfdV2KqtG4WM3GTJKRUdA6BRghkZoHtpytIQfx9BR7OQgG5j_mFkVmmEG_nG3j9s4n6QMOAVWGEN-hqGwGadb_25FsYZ4YjhMJtyPHPR5ckZH-8IVQ2_YP9cUyYpEUlMqDcIYfurs"/>
-<img class="w-full rounded-xl object-cover h-64 hover:opacity-90 transition-opacity" data-alt="Close up of a sparkling champagne tower being filled at a glamorous gala dinner. Bubbles and light reflecting off the crystal glasses. The background is a mix of warm bokeh lights and luxury decor. High-energy celebratory mood." src="https://lh3.googleusercontent.com/aida-public/AB6AXuC5NxYDDqXAVLmEGZIQ2fNIUlfERND-famW-igdU7jSBJCzGPx3KODGIDdxqbRq8-8hXUbp7fQ4sW2sDnOMyGw9pTNm0Nn6omal17wzHjMPVMGILAh-NQqOGgqOZZC9lFTQshmPEEN65CJe10xsIzrw9OniqW7FX02mxzCxphqnQ3WyHFKU8botLIobvqYhHmH9-sQa00yT2o5U8YmFP3AWaq5moXMpGitOIM2GfOqhZcYt55C5UZDJ_1dpdC0wc6MccBZnJ1CzoJE"/>
-</div>
-<div class="space-y-6">
-<img class="w-full rounded-xl object-cover h-80 hover:opacity-90 transition-opacity" data-alt="A minimalist dessert presentation on a white ceramic plate with a single, perfectly sculpted chocolate sphere being melted by hot caramel sauce. Dynamic and artistic culinary shot. Dark, moody background with sharp focus on the dessert's textures. Artistic food photography style." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDkRUguYZkVwbHTPFOvWCRDPyBX-O-1ZkEAhm9dTvM1z7FChzHlPyg11VILws33Hnm32Sl8H42z1yzeiC6R0t4RWsomvVFqGCxWrbx9REs8oM9JxcjNB5FKUFrixoq-0fRO8fSZ0c6WV4VmUP9PHr73ARk4EZ0jCMrmLhdmmyv2KZDJ5XQU1sDi_hWaaZWqIR5JfepH6gfAMLG9lPeMfsbohh1xTKdKi6zeAUOlP-PYM0ha0hhehM1z8SFK7V5M1cdm1iPNK8JmXz4"/>
-<img class="w-full rounded-xl object-cover h-80 hover:opacity-90 transition-opacity" data-alt="The staff of a luxury catering service, dressed in matching professional black uniforms, standing in formation before a beautifully set event hall. They look poised, professional, and ready to serve. The lighting is bright and professional, highlighting team unity and service excellence." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCA-Ck9ewd1pIqlCutbX7sC_CJ4WC9okCM8o6gBGC-F5YpsoBUxhkPAqxaa0VmMmK8UgVz_Kdg7jhtn10AfmBTOF1WPezYo74aCOgDjytDu_6Pgbs73FDo1aJ3XW7Iyyxk-XHwxHICJDVB2Tdrq7Hg0Bw9v-tS4Xyo9VludwESV_-kZFS2YB6BGhM7jnqqFBk_7VlQR34aezLr0s5VG889aokwEZIgLV8mOdw-hbOAGbOXTezCIRYH2Y1DdygR3JDpKjRWo7GA4S-c"/>
-</div>
-</div>
-</div>
+<section class="py-20 md:py-32 bg-surface" id="gallery">
+  <div class="max-w-[1280px] mx-auto px-5 md:px-16">
+    <div class="text-center mb-12 md:mb-16 reveal">
+      <span class="font-body text-label-lg text-secondary tracking-widest uppercase">Our Portfolio</span>
+      <h2 class="font-display text-heading-lg-mobile md:text-heading-lg text-primary mt-3">Visual Elegance</h2>
+      <div class="gold-separator mx-auto mt-4 mb-4"></div>
+      <p class="font-body text-body-lg text-on-surface-variant">Capturing the beauty of our events and the artistry of our cuisine.</p>
+    </div>
+    <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4 md:gap-6 stagger-children">
+      <div class="space-y-4 md:space-y-6">
+        <div class="gallery-img rounded-2xl overflow-hidden">
+          <img class="w-full object-cover h-48 sm:h-64" alt="Colorful hors d'oeuvres on a sleek tray" src="https://lh3.googleusercontent.com/aida-public/AB6AXuADhy1E4Yum1zO0Oewx-yeunWDmgWGkUUeVixYxM9j_3zIZmsbYU4-MRVp_rukjvTjbeQtsRr3jcCDI-7-YcIykWCBcBWx7yox--go2zFTPNVdliolzo2lF-HLiMhVsptOmjOTQYCpg_mSAxkV1och5XNNm_ZTNrnehpcX0uanSE7pRISzPGpefjQRR77txijo-ng0z5qAx7XblFExJdzpokGE1gXahZeg0-PyyyCjCr2chxPhWUPCKZ_sHEnF4PMSc9JrpNi1J6N4"/>
+        </div>
+        <div class="gallery-img rounded-2xl overflow-hidden">
+          <img class="w-full object-cover h-64 sm:h-96" alt="Luxury rooftop cocktail party at sunset" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBAgBmlTSLElNkyGl1xL8dTrdDO479nBULmtnLrYhKvdtu8sjk8eP7Vy3geuL4PLXhmi8L8fb1FtZRdcF_3zER_S-7uNqUgrwjRDxWjL22pQ9LnBk42yMWHpW_THqY4-Wi3vAe1bEfZKsjXy7LqTem4cXi7uFzAnkmt32prskabHGdAojqnNmm7amllxa1081iPEKLTuGw24H97Z4ZlIt1rgy2mA4tzVD2hDo05Pd6dpoZa3tNQ9lvkHGAvqyimrDbUE7vzGX_UeSU"/>
+        </div>
+      </div>
+      <div class="space-y-4 md:space-y-6">
+        <div class="gallery-img rounded-2xl overflow-hidden">
+          <img class="w-full object-cover h-72 sm:h-[500px]" alt="Artisanal grazing table with cheeses and meats" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAP2nKtfrxv74QT9TviOTuY_JpRnQpHpWAm8GA1D55PFZvoEgjyhGtmgtzettVIMMNJxZjGMskCivOo6JRLiySkEkZAk9iBjJoZ5QjN2oKP-Iy7NUP9pQpzcktgUf4lZRvoCtmfdV2KqtG4WM3GTJKRUdA6BRghkZoHtpytIQfx9BR7OQgG5j_mFkVmmEG_nG3j9s4n6QMOAVWGEN-hqGwGadb_25FsYZ4YjhMJtyPHPR5ckZH-8IVQ2_YP9cUyYpEUlMqDcIYfurs"/>
+        </div>
+        <div class="gallery-img rounded-2xl overflow-hidden">
+          <img class="w-full object-cover h-48 sm:h-64" alt="Champagne tower at a glamorous gala dinner" src="https://lh3.googleusercontent.com/aida-public/AB6AXuC5NxYDDqXAVLmEGZIQ2fNIUlfERND-famW-igdU7jSBJCzGPx3KODGIDdxqbRq8-8hXUbp7fQ4sW2sDnOMyGw9pTNm0Nn6omal17wzHjMPVMGILAh-NQqOGgqOZZC9lFTQshmPEEN65CJe10xsIzrw9OniqW7FX02mxzCxphqnQ3WyHFKU8botLIobvqYhHmH9-sQa00yT2o5U8YmFP3AWaq5moXMpGitOIM2GfOqhZcYt55C5UZDJ_1dpdC0wc6MccBZnJ1CzoJE"/>
+        </div>
+      </div>
+      <div class="space-y-4 md:space-y-6 sm:col-span-2 md:col-span-1">
+        <div class="gallery-img rounded-2xl overflow-hidden">
+          <img class="w-full object-cover h-56 sm:h-80" alt="Chocolate sphere dessert with caramel sauce" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDkRUguYZkVwbHTPFOvWCRDPyBX-O-1ZkEAhm9dTvM1z7FChzHlPyg11VILws33Hnm32Sl8H42z1yzeiC6R0t4RWsomvVFqGCxWrbx9REs8oM9JxcjNB5FKUFrixoq-0fRO8fSZ0c6WV4VmUP9PHr73ARk4EZ0jCMrmLhdmmyv2KZDJ5XQU1sDi_hWaaZWqIR5JfepH6gfAMLG9lPeMfsbohh1xTKdKi6zeAUOlP-PYM0ha0hhehM1z8SFK7V5M1cdm1iPNK8JmXz4"/>
+        </div>
+        <div class="gallery-img rounded-2xl overflow-hidden">
+          <img class="w-full object-cover h-56 sm:h-80" alt="Professional catering staff in formation" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCA-Ck9ewd1pIqlCutbX7sC_CJ4WC9okCM8o6gBGC-F5YpsoBUxhkPAqxaa0VmMmK8UgVz_Kdg7jhtn10AfmBTOF1WPezYo74aCOgDjytDu_6Pgbs73FDo1aJ3XW7Iyyxk-XHwxHICJDVB2Tdrq7Hg0Bw9v-tS4Xyo9VludwESV_-kZFS2YB6BGhM7jnqqFBk_7VlQR34aezLr0s5VG889aokwEZIgLV8mOdw-hbOAGbOXTezCIRYH2Y1DdygR3JDpKjRWo7GA4S-c"/>
+        </div>
+      </div>
+    </div>
+  </div>
 </section>
+
 <!-- Testimonials Section -->
-<section class="py-section-gap bg-primary-container text-white relative overflow-hidden" id="testimonials">
-<div class="absolute top-0 right-0 opacity-10 pointer-events-none">
-<span class="material-symbols-outlined text-[300px]" style="font-variation-settings: 'wght' 100;">format_quote</span>
-</div>
-<div class="max-w-container-max mx-auto px-margin-desktop relative z-10">
-<div class="max-w-4xl mx-auto text-center space-y-12">
-<div class="inline-block px-4 py-1 bg-secondary/20 border border-secondary/30 rounded-full text-secondary-fixed text-label-sm uppercase tracking-widest">
-                        Guest Experiences
-                    </div>
-<div class="min-h-[300px] flex items-center justify-center" id="testimonial-slider">
-<div class="space-y-8 animate-in fade-in duration-700">
-<p class="font-headline-md text-3xl md:text-4xl italic leading-snug">
-                                "Jaasiel Catering transformed our wedding into a gourmet journey. Every dish was a conversation piece, and the service was flawlessly professional. Simply the best in the city."
-                            </p>
-<div>
-<h5 class="font-label-lg text-lg text-secondary-fixed">Eleanor &amp; James Sterling</h5>
-<p class="font-label-sm text-on-primary-container uppercase tracking-tighter mt-1">Wedding Clients, June 2023</p>
-</div>
-</div>
-</div>
-<div class="flex justify-center gap-4">
-<button class="w-12 h-12 rounded-full border border-white/20 flex items-center justify-center hover:bg-white/10 transition-all">
-<span class="material-symbols-outlined">chevron_left</span>
-</button>
-<button class="w-12 h-12 rounded-full border border-white/20 flex items-center justify-center hover:bg-white/10 transition-all">
-<span class="material-symbols-outlined">chevron_right</span>
-</button>
-</div>
-</div>
-</div>
+<section class="py-20 md:py-32 gradient-testimonial text-white relative overflow-hidden" id="testimonials">
+  <!-- Decorative elements -->
+  <div class="absolute top-0 right-0 opacity-5 pointer-events-none">
+    <span class="material-symbols-outlined text-[200px] md:text-[300px]" style="font-variation-settings: 'wght' 100;">format_quote</span>
+  </div>
+  <div class="absolute bottom-0 left-0 w-72 h-72 bg-secondary/5 rounded-full blur-3xl pointer-events-none"></div>
+  <div class="max-w-[1280px] mx-auto px-5 md:px-16 relative z-10">
+    <div class="max-w-4xl mx-auto text-center space-y-10 md:space-y-12">
+      <div class="reveal">
+        <div class="inline-block px-5 py-2 bg-secondary/15 border border-secondary/25 rounded-full text-secondary text-label-sm uppercase tracking-widest font-body">
+          Guest Experiences
+        </div>
+      </div>
+      <div class="min-h-[250px] md:min-h-[300px] flex items-center justify-center" id="testimonial-slider">
+        <div class="space-y-6 md:space-y-8 reveal" id="testimonial-content">
+          <p class="font-display text-2xl md:text-3xl lg:text-4xl italic leading-snug" id="testimonial-text">
+            "Jaasiel Catering transformed our wedding into a gourmet journey. Every dish was a conversation piece, and the service was flawlessly professional. Simply the best in the city."
+          </p>
+          <div>
+            <h5 class="font-body text-label-lg text-lg text-secondary" id="testimonial-author">Eleanor &amp; James Sterling</h5>
+            <p class="font-body text-label-sm text-white/50 uppercase tracking-wider mt-1" id="testimonial-role">Wedding Clients, June 2023</p>
+          </div>
+        </div>
+      </div>
+      <div class="flex justify-center gap-4">
+        <button id="testimonial-prev" class="w-12 h-12 rounded-full border border-white/15 flex items-center justify-center hover:bg-white/10 hover:border-secondary/50 transition-all">
+          <span class="material-symbols-outlined">chevron_left</span>
+        </button>
+        <!-- Dots -->
+        <div class="flex items-center gap-2" id="testimonial-dots">
+          <span class="w-2.5 h-2.5 rounded-full bg-secondary transition-all testimonial-dot"></span>
+          <span class="w-2 h-2 rounded-full bg-white/30 transition-all testimonial-dot"></span>
+          <span class="w-2 h-2 rounded-full bg-white/30 transition-all testimonial-dot"></span>
+        </div>
+        <button id="testimonial-next" class="w-12 h-12 rounded-full border border-white/15 flex items-center justify-center hover:bg-white/10 hover:border-secondary/50 transition-all">
+          <span class="material-symbols-outlined">chevron_right</span>
+        </button>
+      </div>
+    </div>
+  </div>
 </section>
+
 <!-- Contact Section -->
-<section class="py-section-gap bg-background">
-<div class="max-w-container-max mx-auto px-margin-desktop grid md:grid-cols-2 gap-20">
-<div class="space-y-12">
-<div>
-<h2 class="font-headline-lg text-headline-lg text-primary mb-6">Plan Your Menu With Us</h2>
-<p class="font-body-lg text-body-lg text-on-surface-variant">Ready to elevate your next event? Reach out to our specialist coordinators to start crafting your bespoke culinary experience.</p>
-</div>
-<div class="space-y-8">
-<div class="flex gap-6 items-start">
-<div class="w-12 h-12 bg-surface-container-high rounded-full flex items-center justify-center text-primary shrink-0">
-<span class="material-symbols-outlined">call</span>
-</div>
-<div>
-<h6 class="font-label-lg text-primary uppercase text-xs tracking-widest mb-1">Call Us</h6>
-<p class="font-headline-md text-xl">+1 (555) 123-4567</p>
-</div>
-</div>
-<div class="flex gap-6 items-start">
-<div class="w-12 h-12 bg-surface-container-high rounded-full flex items-center justify-center text-primary shrink-0">
-<span class="material-symbols-outlined">mail</span>
-</div>
-<div>
-<h6 class="font-label-lg text-primary uppercase text-xs tracking-widest mb-1">Email</h6>
-<p class="font-headline-md text-xl">events@jaasielcatering.com</p>
-</div>
-</div>
-<div class="flex gap-6 items-start">
-<div class="w-12 h-12 bg-surface-container-high rounded-full flex items-center justify-center text-primary shrink-0">
-<span class="material-symbols-outlined">location_on</span>
-</div>
-<div>
-<h6 class="font-label-lg text-primary uppercase text-xs tracking-widest mb-1">Location</h6>
-<p class="font-headline-md text-xl">Beverly Hills, CA 90210</p>
-</div>
-</div>
-</div>
-</div>
-<div class="bg-white p-8 md:p-12 rounded-2xl shadow-xl border border-primary/5">
-<form class="space-y-6">
-<div class="grid grid-cols-2 gap-6">
-<div class="space-y-2">
-<label class="font-label-sm text-on-surface-variant">Full Name</label>
-<input class="w-full bg-surface border-0 border-b border-outline-variant focus:border-secondary focus:ring-0 transition-all p-3" placeholder="John Doe" type="text"/>
-</div>
-<div class="space-y-2">
-<label class="font-label-sm text-on-surface-variant">Email Address</label>
-<input class="w-full bg-surface border-0 border-b border-outline-variant focus:border-secondary focus:ring-0 transition-all p-3" placeholder="john@example.com" type="email"/>
-</div>
-</div>
-<div class="grid grid-cols-2 gap-6">
-<div class="space-y-2">
-<label class="font-label-sm text-on-surface-variant">Event Date</label>
-<input class="w-full bg-surface border-0 border-b border-outline-variant focus:border-secondary focus:ring-0 transition-all p-3" type="date"/>
-</div>
-<div class="space-y-2">
-<label class="font-label-sm text-on-surface-variant">Expected Guests</label>
-<select class="w-full bg-surface border-0 border-b border-outline-variant focus:border-secondary focus:ring-0 transition-all p-3">
-<option>20-50</option>
-<option>50-150</option>
-<option>150-300</option>
-<option>300+</option>
-</select>
-</div>
-</div>
-<div class="space-y-2">
-<label class="font-label-sm text-on-surface-variant">Message</label>
-<textarea class="w-full bg-surface border-0 border-b border-outline-variant focus:border-secondary focus:ring-0 transition-all p-3" placeholder="Tell us about your event..." rows="4"></textarea>
-</div>
-<button class="w-full py-4 bg-secondary text-on-secondary-fixed font-label-lg rounded-lg shadow-lg hover:shadow-secondary/20 active:scale-95 transition-all">
-                            Send Enquiry
-                        </button>
-</form>
-</div>
-</div>
+<section class="py-20 md:py-32 bg-background" id="contact">
+  <div class="max-w-[1280px] mx-auto px-5 md:px-16 grid md:grid-cols-2 gap-12 md:gap-20">
+    <div class="space-y-10 md:space-y-12 reveal">
+      <div>
+        <span class="font-body text-label-lg text-secondary tracking-widest uppercase">Get In Touch</span>
+        <h2 class="font-display text-heading-lg-mobile md:text-heading-lg text-primary mb-4 mt-3">Plan Your Menu With Us</h2>
+        <div class="gold-separator mb-6"></div>
+        <p class="font-body text-body-lg text-on-surface-variant">Ready to elevate your next event? Reach out to our specialist coordinators to start crafting your bespoke culinary experience.</p>
+      </div>
+      <div class="space-y-6 md:space-y-8">
+        <div class="flex gap-5 md:gap-6 items-start group">
+          <div class="w-12 h-12 bg-secondary/10 rounded-2xl flex items-center justify-center text-secondary shrink-0 group-hover:bg-secondary group-hover:text-white transition-all duration-300">
+            <span class="material-symbols-outlined">call</span>
+          </div>
+          <div>
+            <h6 class="font-body text-label-lg text-primary uppercase text-xs tracking-widest mb-1">Call Us</h6>
+            <p class="font-display text-lg md:text-xl text-on-surface">+1 (555) 123-4567</p>
+          </div>
+        </div>
+        <div class="flex gap-5 md:gap-6 items-start group">
+          <div class="w-12 h-12 bg-secondary/10 rounded-2xl flex items-center justify-center text-secondary shrink-0 group-hover:bg-secondary group-hover:text-white transition-all duration-300">
+            <span class="material-symbols-outlined">mail</span>
+          </div>
+          <div>
+            <h6 class="font-body text-label-lg text-primary uppercase text-xs tracking-widest mb-1">Email</h6>
+            <p class="font-display text-lg md:text-xl text-on-surface">events@jaasielcatering.com</p>
+          </div>
+        </div>
+        <div class="flex gap-5 md:gap-6 items-start group">
+          <div class="w-12 h-12 bg-secondary/10 rounded-2xl flex items-center justify-center text-secondary shrink-0 group-hover:bg-secondary group-hover:text-white transition-all duration-300">
+            <span class="material-symbols-outlined">location_on</span>
+          </div>
+          <div>
+            <h6 class="font-body text-label-lg text-primary uppercase text-xs tracking-widest mb-1">Location</h6>
+            <p class="font-display text-lg md:text-xl text-on-surface">Beverly Hills, CA 90210</p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="bg-white p-6 md:p-10 lg:p-12 rounded-2xl shadow-xl border border-primary/5 reveal">
+      <form class="space-y-5 md:space-y-6">
+        <div class="grid grid-cols-1 sm:grid-cols-2 gap-5 md:gap-6">
+          <div class="space-y-2">
+            <label class="font-body text-label-sm text-on-surface-variant">Full Name</label>
+            <input class="form-input w-full bg-surface-container-low border-0 border-b-2 border-outline-variant focus:border-secondary focus:ring-0 transition-all p-3 rounded-t-lg font-body" placeholder="John Doe" type="text"/>
+          </div>
+          <div class="space-y-2">
+            <label class="font-body text-label-sm text-on-surface-variant">Email Address</label>
+            <input class="form-input w-full bg-surface-container-low border-0 border-b-2 border-outline-variant focus:border-secondary focus:ring-0 transition-all p-3 rounded-t-lg font-body" placeholder="john@example.com" type="email"/>
+          </div>
+        </div>
+        <div class="grid grid-cols-1 sm:grid-cols-2 gap-5 md:gap-6">
+          <div class="space-y-2">
+            <label class="font-body text-label-sm text-on-surface-variant">Event Date</label>
+            <input class="form-input w-full bg-surface-container-low border-0 border-b-2 border-outline-variant focus:border-secondary focus:ring-0 transition-all p-3 rounded-t-lg font-body" type="date"/>
+          </div>
+          <div class="space-y-2">
+            <label class="font-body text-label-sm text-on-surface-variant">Expected Guests</label>
+            <select class="form-input w-full bg-surface-container-low border-0 border-b-2 border-outline-variant focus:border-secondary focus:ring-0 transition-all p-3 rounded-t-lg font-body">
+              <option>20-50</option>
+              <option>50-150</option>
+              <option>150-300</option>
+              <option>300+</option>
+            </select>
+          </div>
+        </div>
+        <div class="space-y-2">
+          <label class="font-body text-label-sm text-on-surface-variant">Message</label>
+          <textarea class="form-input w-full bg-surface-container-low border-0 border-b-2 border-outline-variant focus:border-secondary focus:ring-0 transition-all p-3 rounded-t-lg font-body" placeholder="Tell us about your event..." rows="4"></textarea>
+        </div>
+        <button type="submit" class="w-full btn-gold py-4 rounded-xl text-label-lg font-body">
+          Send Enquiry
+        </button>
+      </form>
+    </div>
+  </div>
 </section>
 </main>
-<!-- Footer -->
-<footer class="bg-tertiary-container text-tertiary-fixed-dim py-section-gap">
-<div class="max-w-container-max mx-auto px-margin-desktop grid grid-cols-1 md:grid-cols-3 gap-gutter">
-<div class="space-y-6">
-<div class="font-headline-md text-headline-md text-on-tertiary-fixed text-white">Jaasiel Catering</div>
-<p class="font-body-md text-on-tertiary-container max-w-sm">
-                    Crafting premium culinary experiences for those who value elegance and exceptional taste.
-                </p>
-<div class="flex gap-4">
-<a class="w-10 h-10 rounded-full bg-white/10 flex items-center justify-center hover:bg-secondary transition-colors" href="#"><span class="material-symbols-outlined text-sm">social_leaderboard</span></a>
-<a class="w-10 h-10 rounded-full bg-white/10 flex items-center justify-center hover:bg-secondary transition-colors" href="#"><span class="material-symbols-outlined text-sm">photo_camera</span></a>
-<a class="w-10 h-10 rounded-full bg-white/10 flex items-center justify-center hover:bg-secondary transition-colors" href="#"><span class="material-symbols-outlined text-sm">linked_camera</span></a>
-</div>
-</div>
-<div class="space-y-6">
-<h4 class="font-label-lg text-white uppercase tracking-widest">Navigation</h4>
-<div class="grid grid-cols-2 gap-4">
-<a class="font-body-md text-on-tertiary-container hover:text-secondary-fixed hover:underline transition-all" href="#">Home</a>
-<a class="font-body-md text-on-tertiary-container hover:text-secondary-fixed hover:underline transition-all" href="#">About</a>
-<a class="font-body-md text-on-tertiary-container hover:text-secondary-fixed hover:underline transition-all" href="#">Menu</a>
-<a class="font-body-md text-on-tertiary-container hover:text-secondary-fixed hover:underline transition-all" href="#">Gallery</a>
-<a class="font-body-md text-on-tertiary-container hover:text-secondary-fixed hover:underline transition-all" href="#">Services</a>
-<a class="font-body-md text-on-tertiary-container hover:text-secondary-fixed hover:underline transition-all" href="#">Book Now</a>
-</div>
-</div>
-<div class="space-y-6">
-<h4 class="font-label-lg text-white uppercase tracking-widest">Newsletter</h4>
-<p class="font-body-md text-on-tertiary-container">Subscribe for seasonal recipes and exclusive event insights.</p>
-<div class="flex">
-<input class="bg-white/5 border-white/20 text-white rounded-l-lg focus:ring-0 focus:border-secondary w-full" placeholder="Email" type="email"/>
-<button class="bg-secondary text-on-secondary-fixed px-6 rounded-r-lg hover:bg-secondary/90 transition-all">Join</button>
-</div>
-</div>
-</div>
-<div class="max-w-container-max mx-auto px-margin-desktop border-t border-white/5 mt-20 pt-8 flex flex-col md:flex-row justify-between items-center gap-4 text-on-tertiary-container text-sm">
-<div>© 2024 Jaasiel Catering Service. All Rights Reserved.</div>
-<div class="flex gap-8">
-<a class="hover:text-secondary-fixed" href="#">Contact</a>
-<a class="hover:text-secondary-fixed" href="#">Privacy Policy</a>
-<a class="hover:text-secondary-fixed" href="#">Terms of Service</a>
-<a class="hover:text-secondary-fixed" href="#">FAQ</a>
-</div>
-</div>
-</footer>
-<script>
-        // Simple Intersection Observer for scroll animations
-        const observer = new IntersectionObserver((entries) => {
-            entries.forEach(entry => {
-                if (entry.isIntersecting) {
-                    entry.target.classList.add('opacity-100', 'translate-y-0');
-                    entry.target.classList.remove('opacity-0', 'translate-y-10');
-                }
-            });
-        }, { threshold: 0.1 });
 
-        document.querySelectorAll('section > div').forEach(el => {
-            el.classList.add('transition-all', 'duration-1000', 'opacity-0', 'translate-y-10');
+<!-- Footer -->
+<footer class="gradient-dark text-white py-16 md:py-20">
+  <div class="max-w-[1280px] mx-auto px-5 md:px-16 grid grid-cols-1 md:grid-cols-3 gap-10 md:gap-12">
+    <div class="space-y-6">
+      <a href="#home" class="font-display text-heading-md text-white flex items-center gap-2">
+        <span class="w-10 h-10 rounded-full gradient-gold flex items-center justify-center text-primary font-bold text-lg">J</span>
+        Jaasiel
+      </a>
+      <p class="font-body text-body-md text-white/60 max-w-sm">
+        Crafting premium culinary experiences for those who value elegance and exceptional taste.
+      </p>
+      <div class="flex gap-3">
+        <a class="w-10 h-10 rounded-xl bg-white/5 border border-white/10 flex items-center justify-center hover:bg-secondary hover:border-secondary transition-all duration-300" href="#">
+          <span class="material-symbols-outlined text-sm">social_leaderboard</span>
+        </a>
+        <a class="w-10 h-10 rounded-xl bg-white/5 border border-white/10 flex items-center justify-center hover:bg-secondary hover:border-secondary transition-all duration-300" href="#">
+          <span class="material-symbols-outlined text-sm">photo_camera</span>
+        </a>
+        <a class="w-10 h-10 rounded-xl bg-white/5 border border-white/10 flex items-center justify-center hover:bg-secondary hover:border-secondary transition-all duration-300" href="#">
+          <span class="material-symbols-outlined text-sm">linked_camera</span>
+        </a>
+      </div>
+    </div>
+    <div class="space-y-6">
+      <h4 class="font-body text-label-lg text-white uppercase tracking-widest">Navigation</h4>
+      <div class="gold-separator"></div>
+      <div class="grid grid-cols-2 gap-3">
+        <a class="font-body text-body-md text-white/60 hover:text-secondary hover:translate-x-1 transition-all duration-200" href="#home">Home</a>
+        <a class="font-body text-body-md text-white/60 hover:text-secondary hover:translate-x-1 transition-all duration-200" href="#services">Services</a>
+        <a class="font-body text-body-md text-white/60 hover:text-secondary hover:translate-x-1 transition-all duration-200" href="#menu">Menu</a>
+        <a class="font-body text-body-md text-white/60 hover:text-secondary hover:translate-x-1 transition-all duration-200" href="#gallery">Gallery</a>
+        <a class="font-body text-body-md text-white/60 hover:text-secondary hover:translate-x-1 transition-all duration-200" href="#testimonials">Testimonials</a>
+        <a class="font-body text-body-md text-white/60 hover:text-secondary hover:translate-x-1 transition-all duration-200" href="#contact">Book Now</a>
+      </div>
+    </div>
+    <div class="space-y-6">
+      <h4 class="font-body text-label-lg text-white uppercase tracking-widest">Newsletter</h4>
+      <div class="gold-separator"></div>
+      <p class="font-body text-body-md text-white/60">Subscribe for seasonal recipes and exclusive event insights.</p>
+      <div class="flex">
+        <input class="bg-white/5 border border-white/10 text-white rounded-l-xl focus:ring-0 focus:border-secondary transition-all w-full px-4 py-3 font-body text-body-sm placeholder-white/40" placeholder="Your email" type="email"/>
+        <button class="btn-gold px-6 rounded-r-xl text-label-lg shrink-0 font-body">Join</button>
+      </div>
+    </div>
+  </div>
+  <div class="max-w-[1280px] mx-auto px-5 md:px-16 border-t border-white/5 mt-12 md:mt-16 pt-8 flex flex-col md:flex-row justify-between items-center gap-4 text-white/40 text-sm">
+    <div class="font-body">&copy; 2025 Jaasiel Catering Service. All Rights Reserved.</div>
+    <div class="flex flex-wrap justify-center gap-6 md:gap-8 font-body">
+      <a class="hover:text-secondary transition-colors" href="#">Contact</a>
+      <a class="hover:text-secondary transition-colors" href="#">Privacy Policy</a>
+      <a class="hover:text-secondary transition-colors" href="#">Terms of Service</a>
+      <a class="hover:text-secondary transition-colors" href="#">FAQ</a>
+    </div>
+  </div>
+</footer>
+
+<!-- Scroll to Top Button -->
+<button id="scroll-top" class="scroll-top-btn fixed bottom-6 right-6 md:bottom-8 md:right-8 w-12 h-12 btn-gold rounded-full flex items-center justify-center shadow-xl z-40" aria-label="Scroll to top">
+  <span class="material-symbols-outlined">arrow_upward</span>
+</button>
+
+<script>
+  // ========== Mobile Menu ==========
+  const mobileMenuBtn = document.getElementById('mobile-menu-btn');
+  const mobileMenu = document.getElementById('mobile-menu');
+  const menuIcon = document.getElementById('menu-icon');
+  let menuOpen = false;
+
+  mobileMenuBtn.addEventListener('click', () => {
+    menuOpen = !menuOpen;
+    if (menuOpen) {
+      mobileMenu.classList.add('open');
+      menuIcon.textContent = 'close';
+    } else {
+      closeMobileMenu();
+    }
+  });
+
+  function closeMobileMenu() {
+    menuOpen = false;
+    mobileMenu.classList.remove('open');
+    menuIcon.textContent = 'menu';
+  }
+
+  // ========== Scroll-Reveal (Intersection Observer) ==========
+  const revealObserver = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('revealed');
+      }
+    });
+  }, { threshold: 0.1, rootMargin: '0px 0px -40px 0px' });
+
+  document.querySelectorAll('.reveal, .stagger-children').forEach(el => {
+    revealObserver.observe(el);
+  });
+
+  // ========== Sticky Nav (compact on scroll) ==========
+  const mainNav = document.getElementById('main-nav');
+  window.addEventListener('scroll', () => {
+    if (window.scrollY > 80) {
+      mainNav.classList.add('shadow-lg');
+      mainNav.classList.remove('h-20');
+      mainNav.classList.add('h-16');
+    } else {
+      mainNav.classList.remove('shadow-lg', 'h-16');
+      mainNav.classList.add('h-20');
+    }
+  }, { passive: true });
+
+  // ========== Active Nav Link Tracking ==========
+  const sections = document.querySelectorAll('section[id]');
+  const navLinks = document.querySelectorAll('.nav-link[data-section]');
+
+  const sectionObserver = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        const id = entry.target.getAttribute('id');
+        navLinks.forEach(link => {
+          link.classList.remove('active', 'text-primary');
+          link.classList.add('text-on-surface-variant');
+          if (link.getAttribute('data-section') === id) {
+            link.classList.add('active', 'text-primary');
+            link.classList.remove('text-on-surface-variant');
+          }
+        });
+      }
+    });
+  }, { threshold: 0.3, rootMargin: '-80px 0px -50% 0px' });
+
+  sections.forEach(section => {
+    sectionObserver.observe(section);
+  });
+
+  // ========== Scroll to Top ==========
+  const scrollTopBtn = document.getElementById('scroll-top');
+  window.addEventListener('scroll', () => {
+    if (window.scrollY > 600) {
+      scrollTopBtn.classList.add('visible');
+    } else {
+      scrollTopBtn.classList.remove('visible');
+    }
+  }, { passive: true });
+
+  scrollTopBtn.addEventListener('click', () => {
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  });
+
+  // ========== Testimonial Slider ==========
+  const testimonials = [
+    {
+      text: '"Jaasiel Catering transformed our wedding into a gourmet journey. Every dish was a conversation piece, and the service was flawlessly professional. Simply the best in the city."',
+      author: 'Eleanor & James Sterling',
+      role: 'Wedding Clients, June 2023',
+    },
+    {
+      text: '"The corporate gala dinner they organized was nothing short of spectacular. Our partners were blown away by the presentation and flavors. A truly five-star experience."',
+      author: 'Michael Chen',
+      role: 'CEO, Vertex Capital',
+    },
+    {
+      text: '"From the tasting session to the final toast, everything was handled with incredible grace. The custom vegetarian menu was creative and absolutely delicious."',
+      author: 'Priya & Arjun Mehta',
+      role: 'Private Party, March 2024',
+    },
+  ];
+
+  let currentTestimonial = 0;
+  const testimonialText = document.getElementById('testimonial-text');
+  const testimonialAuthor = document.getElementById('testimonial-author');
+  const testimonialRole = document.getElementById('testimonial-role');
+  const testimonialContent = document.getElementById('testimonial-content');
+  const dots = document.querySelectorAll('.testimonial-dot');
+
+  function updateTestimonial(index) {
+    testimonialContent.style.opacity = '0';
+    testimonialContent.style.transform = 'translateY(15px)';
+    setTimeout(() => {
+      testimonialText.textContent = testimonials[index].text;
+      testimonialAuthor.textContent = testimonials[index].author;
+      testimonialRole.textContent = testimonials[index].role;
+      testimonialContent.style.opacity = '1';
+      testimonialContent.style.transform = 'translateY(0)';
+      dots.forEach((dot, i) => {
+        if (i === index) {
+          dot.classList.add('bg-secondary');
+          dot.classList.remove('bg-white/30');
+          dot.style.width = '10px';
+          dot.style.height = '10px';
+        } else {
+          dot.classList.remove('bg-secondary');
+          dot.classList.add('bg-white/30');
+          dot.style.width = '8px';
+          dot.style.height = '8px';
+        }
+      });
+    }, 300);
+  }
+
+  testimonialContent.style.transition = 'opacity 0.4s ease, transform 0.4s ease';
+
+  document.getElementById('testimonial-next').addEventListener('click', () => {
+    currentTestimonial = (currentTestimonial + 1) % testimonials.length;
+    updateTestimonial(currentTestimonial);
+  });
+
+  document.getElementById('testimonial-prev').addEventListener('click', () => {
+    currentTestimonial = (currentTestimonial - 1 + testimonials.length) % testimonials.length;
+    updateTestimonial(currentTestimonial);
+  });
+
+  // Auto-rotate testimonials every 6 seconds
+  let testimonialInterval = setInterval(() => {
+    currentTestimonial = (currentTestimonial + 1) % testimonials.length;
+    updateTestimonial(currentTestimonial);
+  }, 6000);
+
+  // Pause auto-rotation on hover
+  document.getElementById('testimonial-slider').addEventListener('mouseenter', () => {
+    clearInterval(testimonialInterval);
+  });
+  document.getElementById('testimonial-slider').addEventListener('mouseleave', () => {
+    testimonialInterval = setInterval(() => {
+      currentTestimonial = (currentTestimonial + 1) % testimonials.length;
+      updateTestimonial(currentTestimonial);
+    }, 6000);
+  });
+</script>
+</body>
+</html>
+<!-- anslate-y-10');
             observer.observe(el);
         });
 
@@ -519,6 +1004,6 @@
                 nav.classList.remove('shadow-lg', 'h-16');
                 nav.classList.add('h-20');
             }
-        };
+        }; -->
     </script>
 </body></html>
