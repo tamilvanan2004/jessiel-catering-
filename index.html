@@ -1,4 +1,5 @@
-<!DOCTYPE html><html class="scroll-smooth" lang="en">
+<!DOCTYPE html>
+<html class="scroll-smooth" lang="en">
 <head>
 <meta charset="utf-8"/>
 <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
@@ -60,6 +61,7 @@
               lg: "0.75rem",
               xl: "1rem",
               "2xl": "1.5rem",
+              "3xl": "2rem",
               full: "9999px",
             },
             spacing: {
@@ -221,8 +223,7 @@
       transition: all 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94);
     }
     .service-card:hover {
-      transform: translateY(-8px);
-      box-shadow: 0 20px 60px rgba(26, 26, 46, 0.12);
+      box-shadow: 0 30px 60px rgba(26, 26, 46, 0.15);
     }
 
     /* Form input focus animation */
@@ -330,7 +331,7 @@
       transition: transform 0.7s cubic-bezier(0.25, 0.46, 0.45, 0.94);
     }
     .gallery-img:hover img {
-      transform: scale(1.08);
+      transform: scale(1.08) translateZ(10px);
     }
 
     /* Smooth scrollbar */
@@ -351,6 +352,74 @@
         display: none;
       }
     }
+
+    /* ==================== 3D Styles ==================== */
+    .perspective-1000 {
+      perspective: 1000px;
+    }
+    .preserve-3d {
+      transform-style: preserve-3d;
+    }
+    .tilt-card {
+      transform-style: preserve-3d;
+      will-change: transform;
+      transition: transform 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94), box-shadow 0.3s ease;
+    }
+    .tilt-child {
+      transform: translateZ(40px);
+      transform-style: preserve-3d;
+    }
+    .tilt-child-lg {
+      transform: translateZ(70px);
+      transform-style: preserve-3d;
+    }
+    .tilt-child-sm {
+      transform: translateZ(20px);
+      transform-style: preserve-3d;
+    }
+    
+    /* Floating background shapes */
+    .floating-container {
+      position: absolute;
+      inset: 0;
+      overflow: hidden;
+      pointer-events: none;
+      z-index: 0;
+    }
+    .blob-3d {
+      position: absolute;
+      border-radius: 50%;
+      pointer-events: none;
+      animation: float-3d 15s ease-in-out infinite;
+    }
+    .blob-gold {
+      background: radial-gradient(circle at 35% 35%, rgba(201, 168, 76, 0.18) 0%, rgba(201, 168, 76, 0.05) 50%, transparent 80%);
+    }
+    .blob-navy {
+      background: radial-gradient(circle at 35% 35%, rgba(22, 33, 62, 0.12) 0%, rgba(26, 26, 46, 0.03) 50%, transparent 80%);
+    }
+    .blob-blur {
+      filter: blur(60px);
+    }
+    
+    @keyframes float-3d {
+      0%, 100% {
+        transform: translateY(0px) rotate(0deg) scale(1);
+      }
+      33% {
+        transform: translateY(-30px) rotate(120deg) scale(1.1);
+      }
+      66% {
+        transform: translateY(15px) rotate(240deg) scale(0.95);
+      }
+    }
+    
+    .animation-delay-2000 {
+      animation-delay: 2s;
+    }
+    .animation-delay-4000 {
+      animation-delay: 4s;
+    }
   </style>
 </head>
 <body class="bg-background text-on-surface font-body overflow-x-hidden">
@@ -360,7 +429,7 @@
   <div class="max-w-[1280px] mx-auto px-5 md:px-16 flex justify-between items-center h-full">
     <!-- Logo -->
     <a href="#home" class="font-display text-heading-md text-primary tracking-tight flex items-center gap-2">
-      <span class="w-10 h-10 rounded-full gradient-gold flex items-center justify-center text-primary font-bold text-lg">J</span>
+      <span class="w-10 h-10 rounded-full gradient-gold flex items-center justify-center text-primary font-bold text-lg shadow-md">J</span>
       Jaasiel
     </a>
     <!-- Desktop Nav -->
@@ -403,39 +472,45 @@
     <div class="w-full h-full bg-cover bg-center" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuDHzz0SmIMhSJExpJpBW6cjNafUGU7NpAORN5mHhm5S4uXNkfAZRpcpI9bbgEszUU6vvHmUvegsr4AuPlgEbtPn_DiAc1tfhmUnWwdZfOQwpFlLq_x-NM09Fu1SuxPwYRkL5QIKWun4a6CaoDhI-MJKGKgeyVAev-kjiabwcJZYwybViIXhopDrgDq1mqfbIzBuj7NSkjE_nMwJ-HtnSKM75YbLDZoMhj6e8HYREbJu1YrKvYhj5bsryWnAQeo39gt9nZsNgs1PFjQ')">
     </div>
     <!-- Dark overlay for readability -->
-    <div class="absolute inset-0 bg-gradient-to-r from-[#1a1a2e]/80 via-[#1a1a2e]/50 to-transparent"></div>
+    <div class="absolute inset-0 bg-gradient-to-r from-[#1a1a2e]/85 via-[#1a1a2e]/55 to-transparent"></div>
   </div>
-  <div class="max-w-[1280px] mx-auto px-5 md:px-16 relative z-10 w-full">
-    <div class="max-w-2xl">
-      <!-- Gold accent bar -->
-      <div class="gold-separator mb-8"></div>
-      <h1 class="font-display text-hero-mobile md:text-hero-desktop text-white mb-6 leading-tight">
-        Exquisite Flavors, Unforgettable Moments
-      </h1>
-      <p class="font-body text-body-lg text-white/80 mb-10 leading-relaxed max-w-lg">
-        Redefining luxury catering with a touch of culinary artistry. From intimate gatherings to grand celebrations, we bring gourmet excellence to your table.
-      </p>
-      <div class="flex flex-col sm:flex-row gap-4">
-        <a href="#contact" class="btn-gold px-8 py-4 rounded-xl text-label-lg text-center">
-          Book Your Event
-        </a>
-        <a href="#menu" class="btn-outline border-white/40 text-white hover:bg-white hover:text-primary px-8 py-4 rounded-xl text-label-lg text-center backdrop-blur-sm">
-          Explore Menu
-        </a>
-      </div>
-      <!-- Trust badges -->
-      <div class="flex flex-wrap gap-6 mt-12 pt-8 border-t border-white/10">
-        <div class="text-center">
-          <div class="font-display text-heading-sm text-secondary">500+</div>
-          <div class="text-label-sm text-white/60 uppercase tracking-wider">Events</div>
+  <div class="max-w-[1280px] mx-auto px-5 md:px-16 relative z-10 w-full flex items-center justify-start py-12">
+    <!-- 3D Glass Hero Container -->
+    <div class="max-w-2xl glass-dark p-8 md:p-12 rounded-3xl border border-white/10 shadow-[0_30px_70px_rgba(0,0,0,0.4)] tilt-card relative overflow-hidden">
+      <!-- Ambient card light -->
+      <div class="absolute -top-24 -left-24 w-48 h-48 bg-secondary/15 rounded-full blur-2xl pointer-events-none"></div>
+      
+      <div class="tilt-child">
+        <!-- Gold accent bar -->
+        <div class="gold-separator mb-6 md:mb-8"></div>
+        <h1 class="font-display text-hero-mobile md:text-hero-desktop text-white mb-6 leading-tight">
+          Exquisite Flavors, Unforgettable Moments
+        </h1>
+        <p class="font-body text-body-lg text-white/80 mb-8 md:mb-10 leading-relaxed max-w-lg">
+          Redefining luxury catering with a touch of culinary artistry. From intimate gatherings to grand celebrations, we bring gourmet excellence to your table.
+        </p>
+        <div class="flex flex-col sm:flex-row gap-4">
+          <a href="#contact" class="btn-gold px-8 py-4 rounded-xl text-label-lg text-center">
+            Book Your Event
+          </a>
+          <a href="#menu" class="btn-outline border-white/40 text-white hover:bg-white hover:text-primary px-8 py-4 rounded-xl text-label-lg text-center backdrop-blur-sm">
+            Explore Menu
+          </a>
         </div>
-        <div class="text-center">
-          <div class="font-display text-heading-sm text-secondary">15+</div>
-          <div class="text-label-sm text-white/60 uppercase tracking-wider">Chefs</div>
-        </div>
-        <div class="text-center">
-          <div class="font-display text-heading-sm text-secondary">98%</div>
-          <div class="text-label-sm text-white/60 uppercase tracking-wider">Satisfaction</div>
+        <!-- Trust badges -->
+        <div class="flex flex-wrap gap-6 mt-10 md:mt-12 pt-6 md:pt-8 border-t border-white/10">
+          <div class="text-center">
+            <div class="font-display text-heading-sm text-secondary">500+</div>
+            <div class="text-label-sm text-white/60 uppercase tracking-wider">Events</div>
+          </div>
+          <div class="text-center">
+            <div class="font-display text-heading-sm text-secondary">15+</div>
+            <div class="text-label-sm text-white/60 uppercase tracking-wider">Chefs</div>
+          </div>
+          <div class="text-center">
+            <div class="font-display text-heading-sm text-secondary">98%</div>
+            <div class="text-label-sm text-white/60 uppercase tracking-wider">Satisfaction</div>
+          </div>
         </div>
       </div>
     </div>
@@ -443,10 +518,14 @@
 </section>
 
 <!-- About Section -->
-<section class="py-20 md:py-32 bg-background">
-  <div class="max-w-[1280px] mx-auto px-5 md:px-16 grid md:grid-cols-2 gap-10 md:gap-16 items-center">
-    <div class="signature-image-frame reveal">
-      <img class="w-full aspect-[4/5] object-cover rounded-xl shadow-2xl" alt="Chef meticulously garnishing a gourmet dish" src="https://lh3.googleusercontent.com/aida-public/AB6AXuASr-vfn2-5qQFQkGBusQUP-yFWDsfwShyGSR9FM87enwNXgvNC--jxBnGFSdKMY40fbrBQhz1vepbYPWF_oL1CIMAt-z14lG8pFJKMT4r-Qoc4zyZ9NW5IDj-h8cEgtiFOKbngOV2XRWfUna4aryT7Qy3YXQ57hLuust9feH08axjKKmVIiQy1IU-X3CE9DBMDEwXG4sbDRfrEr-VLrvp5Ssi290VjdyuTeDDuFdi_E_gSZXMfptV6t3eC74K20m9WqbtbiUfQe8Q"/>
+<section class="py-20 md:py-32 bg-background relative overflow-hidden">
+  <div class="floating-container">
+    <div class="blob-3d blob-gold blob-blur w-96 h-96 -top-20 -left-20 animation-delay-2000"></div>
+    <div class="blob-3d blob-navy blob-blur w-[500px] h-[500px] -bottom-32 -right-32"></div>
+  </div>
+  <div class="max-w-[1280px] mx-auto px-5 md:px-16 grid md:grid-cols-2 gap-10 md:gap-16 items-center relative z-10">
+    <div class="signature-image-frame tilt-card reveal">
+      <img class="w-full aspect-[4/5] object-cover rounded-xl shadow-2xl tilt-child-lg" alt="Chef meticulously garnishing a gourmet dish" src="https://lh3.googleusercontent.com/aida-public/AB6AXuASr-vfn2-5qQFQkGBusQUP-yFWDsfwShyGSR9FM87enwNXgvNC--jxBnGFSdKMY40fbrBQhz1vepbYPWF_oL1CIMAt-z14lG8pFJKMT4r-Qoc4zyZ9NW5IDj-h8cEgtiFOKbngOV2XRWfUna4aryT7Qy3YXQ57hLuust9feH08axjKKmVIiQy1IU-X3CE9DBMDEwXG4sbDRfrEr-VLrvp5Ssi290VjdyuTeDDuFdi_E_gSZXMfptV6t3eC74K20m9WqbtbiUfQe8Q"/>
     </div>
     <div class="space-y-6 md:space-y-8 pl-0 md:pl-4 reveal">
       <div>
@@ -461,11 +540,11 @@
         Our team of master chefs selects only the finest seasonal ingredients, transforming them into signature dishes that delight the senses. We don't just serve food; we craft memories that linger long after the final course.
       </p>
       <div class="grid grid-cols-2 gap-6 md:gap-8 pt-4">
-        <div class="p-4 bg-surface-container rounded-xl text-center md:text-left">
+        <div class="p-4 bg-surface-container rounded-xl text-center md:text-left shadow-sm">
           <div class="font-display text-heading-md text-secondary">500+</div>
           <div class="font-body text-label-sm text-on-surface-variant uppercase tracking-wider">Events Hosted</div>
         </div>
-        <div class="p-4 bg-surface-container rounded-xl text-center md:text-left">
+        <div class="p-4 bg-surface-container rounded-xl text-center md:text-left shadow-sm">
           <div class="font-display text-heading-md text-secondary">15+</div>
           <div class="font-body text-label-sm text-on-surface-variant uppercase tracking-wider">Master Chefs</div>
         </div>
@@ -475,8 +554,12 @@
 </section>
 
 <!-- Services Section -->
-<section class="py-20 md:py-32 bg-surface-container-low" id="services">
-  <div class="max-w-[1280px] mx-auto px-5 md:px-16">
+<section class="py-20 md:py-32 bg-surface-container-low relative overflow-hidden" id="services">
+  <div class="floating-container">
+    <div class="blob-3d blob-navy blob-blur w-[600px] h-[600px] -top-40 -right-40"></div>
+    <div class="blob-3d blob-gold blob-blur w-80 h-80 -bottom-10 -left-20 animation-delay-4000"></div>
+  </div>
+  <div class="max-w-[1280px] mx-auto px-5 md:px-16 relative z-10">
     <div class="text-center mb-12 md:mb-16 reveal">
       <span class="font-body text-label-lg text-secondary tracking-widest uppercase">What We Offer</span>
       <h2 class="font-display text-heading-lg-mobile md:text-heading-lg text-primary mb-4 mt-3">Tailored Catering Experiences</h2>
@@ -485,53 +568,53 @@
     </div>
     <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 md:gap-8 stagger-children">
       <!-- Weddings -->
-      <div class="service-card group bg-white p-2 rounded-2xl shadow-sm overflow-hidden">
-        <div class="overflow-hidden rounded-xl h-56 md:h-64 mb-5">
+      <div class="service-card tilt-card group bg-white p-4 rounded-2xl shadow-lg border border-primary/5 overflow-hidden">
+        <div class="overflow-hidden rounded-xl h-56 md:h-64 mb-5 tilt-child shadow-md">
           <img class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700" alt="Romantic wedding reception buffet" src="https://lh3.googleusercontent.com/aida-public/AB6AXuC-QrtN7Z__mU8_Xv8hcm-j4hs4yUAO-KRui2xrQSbTvQDf1Kw_5XuDbHcgBXMGxVBF-lseqzufpbBRZpzyi0F30s1zcWouAn_AkwxdKQdqyQ2EFfLFRyQ60WPSfrKJArT_HXm6dsyp3XWKZifYsXNLaHkhpzI9g8JizO9QBHVF36iJeF134G9vb-y32WZ5_4uuxM6eTy_xy9bNFJ0NJkCaGMsotcxnb4yX3TLp3qZPScy2f4RYLr2gQBXU-_ReHqdZ9BfxiSXHbP4"/>
         </div>
-        <div class="p-4 space-y-3">
+        <div class="space-y-3 tilt-child-sm">
           <h3 class="font-display text-heading-sm text-primary">Weddings</h3>
-          <p class="font-body text-body-md text-on-surface-variant">Bespoke menus that reflect your love story, from formal banquets to chic cocktail hours.</p>
-          <a class="inline-flex items-center text-secondary font-body text-label-lg group-hover:gap-2 transition-all" href="#">
+          <p class="font-body text-body-sm text-on-surface-variant">Bespoke menus that reflect your love story, from formal banquets to chic cocktail hours.</p>
+          <a class="inline-flex items-center text-secondary font-body text-label-lg group-hover:gap-2 transition-all mt-1" href="#">
             Learn More <span class="material-symbols-outlined text-sm ml-1">arrow_forward</span>
           </a>
         </div>
       </div>
       <!-- Corporate Events -->
-      <div class="service-card group bg-white p-2 rounded-2xl shadow-sm overflow-hidden">
-        <div class="overflow-hidden rounded-xl h-56 md:h-64 mb-5">
+      <div class="service-card tilt-card group bg-white p-4 rounded-2xl shadow-lg border border-primary/5 overflow-hidden">
+        <div class="overflow-hidden rounded-xl h-56 md:h-64 mb-5 tilt-child shadow-md">
           <img class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700" alt="Modern corporate lunch catering" src="https://lh3.googleusercontent.com/aida-public/AB6AXuA5bZUYC1ZELluD3cRmYOR7KBNQ8Xr0JpT0_mXAA-4ybHC0z9Ij94G5RRiiQI73BgTFnkomJkQ7rUQxLijw2nbTFsqbMT-DJebT6xi8KQ9WZUiWwsfOOqzweHP3dxL0JApYZvfFwhXepHpPaFV30XJWCJiJmfc_uQs1bs51cKjI-27rnF9Dw10lRsBVpsl5EOjmglFYaQskBFmBQxHxeHEMePDzkNKNymjZNt6J9804R7kEc-OdVfr9DPNDyPrSucMKD_GLFOvoEuY"/>
         </div>
-        <div class="p-4 space-y-3">
+        <div class="space-y-3 tilt-child-sm">
           <h3 class="font-display text-heading-sm text-primary">Corporate</h3>
-          <p class="font-body text-body-md text-on-surface-variant">Professional catering for board meetings, product launches, and gala dinners that impress.</p>
-          <a class="inline-flex items-center text-secondary font-body text-label-lg group-hover:gap-2 transition-all" href="#">
+          <p class="font-body text-body-sm text-on-surface-variant">Professional catering for board meetings, product launches, and gala dinners that impress.</p>
+          <a class="inline-flex items-center text-secondary font-body text-label-lg group-hover:gap-2 transition-all mt-1" href="#">
             Learn More <span class="material-symbols-outlined text-sm ml-1">arrow_forward</span>
           </a>
         </div>
       </div>
       <!-- Private Parties -->
-      <div class="service-card group bg-white p-2 rounded-2xl shadow-sm overflow-hidden">
-        <div class="overflow-hidden rounded-xl h-56 md:h-64 mb-5">
+      <div class="service-card tilt-card group bg-white p-4 rounded-2xl shadow-lg border border-primary/5 overflow-hidden">
+        <div class="overflow-hidden rounded-xl h-56 md:h-64 mb-5 tilt-child shadow-md">
           <img class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700" alt="Luxury birthday party food station" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCzd0dlLrADvdtflJz7A9Q7-u-cTsw393YBMlUPbH4NVaOWs9BwBmQ4sjlYbvj8flacQ7l8P0hAPGT7RsdjqrHC7qle1JhDC7TiHYZ32rokHQCkpPadYOEO1aTerA5I40HkbYIrn1K0IgZOpEZpHAa-my1ARWTdBLTLNWP6oFG6VZyIjY0DHrCH8NDodY7RrbJ1_so3MT4i_zCrVGph_WKx9C1HB0e0gx5Na6pY6lGe2XxW6lD4Pmb3EV_AkJb3MwJEYexpMQeNWj0"/>
         </div>
-        <div class="p-4 space-y-3">
+        <div class="space-y-3 tilt-child-sm">
           <h3 class="font-display text-heading-sm text-primary">Private Parties</h3>
-          <p class="font-body text-body-md text-on-surface-variant">Intimate celebrations enhanced by creative menus and attentive, discreet service.</p>
-          <a class="inline-flex items-center text-secondary font-body text-label-lg group-hover:gap-2 transition-all" href="#">
+          <p class="font-body text-body-sm text-on-surface-variant">Intimate celebrations enhanced by creative menus and attentive, discreet service.</p>
+          <a class="inline-flex items-center text-secondary font-body text-label-lg group-hover:gap-2 transition-all mt-1" href="#">
             Learn More <span class="material-symbols-outlined text-sm ml-1">arrow_forward</span>
           </a>
         </div>
       </div>
       <!-- Custom Menus -->
-      <div class="service-card group bg-white p-2 rounded-2xl shadow-sm overflow-hidden">
-        <div class="overflow-hidden rounded-xl h-56 md:h-64 mb-5">
+      <div class="service-card tilt-card group bg-white p-4 rounded-2xl shadow-lg border border-primary/5 overflow-hidden">
+        <div class="overflow-hidden rounded-xl h-56 md:h-64 mb-5 tilt-child shadow-md">
           <img class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700" alt="Chef presenting a custom-designed dish" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCEJfEc7OOOx0ShWd0Z9FbVZoMc_4qKQHKsnY_1J4PMPowe82DtnxHi34BzLRQ1RKBc0_9B49CP_w_ZiUEe_4kYwDVwTblVh9MBmLi8YbiTub7y5vB5vyjybhzfQ7LsdwRGZWMvMqe8yWI8eozBzNUH0xYkncBfpUyPG5Aj5JpTdxNoqEkBRLh1OnTSVMiCCcmb_Jb2xYxG6FsU314bSA1Lzmpy54H9l1yfqbrpQ-50qbwzc2uD0TxQ5MsZKeSzac6_M3LjR9ZuAcA"/>
         </div>
-        <div class="p-4 space-y-3">
+        <div class="space-y-3 tilt-child-sm">
           <h3 class="font-display text-heading-sm text-primary">Custom Menus</h3>
-          <p class="font-body text-body-md text-on-surface-variant">Personalized culinary journeys crafted specifically to meet your dietary needs and tastes.</p>
-          <a class="inline-flex items-center text-secondary font-body text-label-lg group-hover:gap-2 transition-all" href="#">
+          <p class="font-body text-body-sm text-on-surface-variant">Personalized culinary journeys crafted specifically to meet your dietary needs and tastes.</p>
+          <a class="inline-flex items-center text-secondary font-body text-label-lg group-hover:gap-2 transition-all mt-1" href="#">
             Learn More <span class="material-symbols-outlined text-sm ml-1">arrow_forward</span>
           </a>
         </div>
@@ -556,7 +639,7 @@
       <!-- Menu Item 1 -->
       <div class="menu-item-row group flex flex-col md:flex-row items-center justify-between py-8 md:py-10 px-4 md:px-8 transition-all duration-300 rounded-xl reveal">
         <div class="flex flex-col md:flex-row items-center gap-5 md:gap-8 mb-4 md:mb-0 text-center md:text-left">
-          <img class="w-24 h-24 md:w-32 md:h-32 rounded-full object-cover shadow-lg border-3 border-secondary/20 group-hover:border-secondary/60 transition-all" alt="Braised Lamb Shank" src="https://lh3.googleusercontent.com/aida-public/AB6AXuA97lvradb9mloFQ9qhCFNAm4pEcb0fCH5FsHFVoubanquCeJRnBFKSNMDbXuwb3B1Y-OtDnyeBUYQfZAw-HpJ3z5gaZ-7Tg1VfCiKohfmuueHZnbEjGPOKbNOi1rR3EIVSejjJp7e8-dO4zJbGGlpC3PHZ9z05GMwBVKzloLRZXK33H8kqjszpp2tqY5Ya3Inh2Rvl_dX9uqtgH7NWbfu2OUeRSAOfVu3NdQJbdj-ca68knxA-QoEBG3Dw5znT2aDC7cGm2XJVXdo"/>
+          <img class="w-24 h-24 md:w-32 md:h-32 rounded-full object-cover shadow-lg border-3 border-secondary/20 group-hover:border-secondary/60 group-hover:scale-105 group-hover:shadow-xl transition-all duration-500" alt="Braised Lamb Shank" src="https://lh3.googleusercontent.com/aida-public/AB6AXuA97lvradb9mloFQ9qhCFNAm4pEcb0fCH5FsHFVoubanquCeJRnBFKSNMDbXuwb3B1Y-OtDnyeBUYQfZAw-HpJ3z5gaZ-7Tg1VfCiKohfmuueHZnbEjGPOKbNOi1rR3EIVSejjJp7e8-dO4zJbGGlpC3PHZ9z05GMwBVKzloLRZXK33H8kqjszpp2tqY5Ya3Inh2Rvl_dX9uqtgH7NWbfu2OUeRSAOfVu3NdQJbdj-ca68knxA-QoEBG3Dw5znT2aDC7cGm2XJVXdo"/>
           <div>
             <h4 class="font-display text-xl md:text-2xl text-primary mb-1">Braised Lamb Shank</h4>
             <p class="font-body text-body-md text-on-surface-variant">Slow-cooked for 12 hours in a rich red wine jus with truffle polenta.</p>
@@ -570,7 +653,7 @@
       <!-- Menu Item 2 -->
       <div class="menu-item-row group flex flex-col md:flex-row items-center justify-between py-8 md:py-10 px-4 md:px-8 transition-all duration-300 rounded-xl reveal">
         <div class="flex flex-col md:flex-row items-center gap-5 md:gap-8 mb-4 md:mb-0 text-center md:text-left">
-          <img class="w-24 h-24 md:w-32 md:h-32 rounded-full object-cover shadow-lg border-3 border-secondary/20 group-hover:border-secondary/60 transition-all" alt="Gold-Leaf Dessert Platter" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAKi0-t-DwqlE1o9O0Mf6ZbIY05sEv7uOPEzhcfpGXK5jtbcJ--5C60jaUTQHbNF5LkN0zGHpqkuj10fN4kFf3AdGItJ2wuupZc1Yl33NVzV8maCHNzQFcLwKS5EyDxbAwcQP4HWSptDP_sUD8naNgkx1Ix2sB9ssOUj1pENIIfaFlQT3E0aEvD9mACm_to37Isx_Kb0xZTe66d1QvQTrdOoUHmRAyRQtpMKwhBAN9KpqYFleBzCDtd3HjJGJtamFIkP8lNUJBRmtc"/>
+          <img class="w-24 h-24 md:w-32 md:h-32 rounded-full object-cover shadow-lg border-3 border-secondary/20 group-hover:border-secondary/60 group-hover:scale-105 group-hover:shadow-xl transition-all duration-500" alt="Gold-Leaf Dessert Platter" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAKi0-t-DwqlE1o9O0Mf6ZbIY05sEv7uOPEzhcfpGXK5jtbcJ--5C60jaUTQHbNF5LkN0zGHpqkuj10fN4kFf3AdGItJ2wuupZc1Yl33NVzV8maCHNzQFcLwKS5EyDxbAwcQP4HWSptDP_sUD8naNgkx1Ix2sB9ssOUj1pENIIfaFlQT3E0aEvD9mACm_to37Isx_Kb0xZTe66d1QvQTrdOoUHmRAyRQtpMKwhBAN9KpqYFleBzCDtd3HjJGJtamFIkP8lNUJBRmtc"/>
           <div>
             <h4 class="font-display text-xl md:text-2xl text-primary mb-1">Gold-Leaf Dessert Platter</h4>
             <p class="font-body text-body-md text-on-surface-variant">A selection of artisanal tarts, macarons, and mousses finished with 24k edible gold.</p>
@@ -584,7 +667,7 @@
       <!-- Menu Item 3 -->
       <div class="menu-item-row group flex flex-col md:flex-row items-center justify-between py-8 md:py-10 px-4 md:px-8 transition-all duration-300 rounded-xl reveal">
         <div class="flex flex-col md:flex-row items-center gap-5 md:gap-8 mb-4 md:mb-0 text-center md:text-left">
-          <img class="w-24 h-24 md:w-32 md:h-32 rounded-full object-cover shadow-lg border-3 border-secondary/20 group-hover:border-secondary/60 transition-all" alt="Saffron Lobster Risotto" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCIMFeKceeoTLiz3OLUCVyMd_pRjLLWc0zkiXAvBN8vnp9I8wOWfaCm7tMQ6BziErJEyNYL8exZtq_cHeALP7zYot2zg5yvoj5oYGIwb-ZEZkVFZTdgsv5MNeEFkHy-yotpnTQjLPTu2ibztVAQgLCKnUxRq2hWcV5-4poB89TR5cnjMWLcytSMfj0KQotgyJPhzsreP8j7L1tC-_D9CEdoPjLjzIcFgqqEjabn4zhDsOFycYNUpQoXVqOtoSRr9A70HA5pyMQpybg"/>
+          <img class="w-24 h-24 md:w-32 md:h-32 rounded-full object-cover shadow-lg border-3 border-secondary/20 group-hover:border-secondary/60 group-hover:scale-105 group-hover:shadow-xl transition-all duration-500" alt="Saffron Lobster Risotto" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCIMFeKceeoTLiz3OLUCVyMd_pRjLLWc0zkiXAvBN8vnp9I8wOWfaCm7tMQ6BziErJEyNYL8exZtq_cHeALP7zYot2zg5yvoj5oYGIwb-ZEZkVFZTdgsv5MNeEFkHy-yotpnTQjLPTu2ibztVAQgLCKnUxRq2hWcV5-4poB89TR5cnjMWLcytSMfj0KQotgyJPhzsreP8j7L1tC-_D9CEdoPjLjzIcFgqqEjabn4zhDsOFycYNUpQoXVqOtoSRr9A70HA5pyMQpybg"/>
           <div>
             <h4 class="font-display text-xl md:text-2xl text-primary mb-1">Saffron Lobster Risotto</h4>
             <p class="font-body text-body-md text-on-surface-variant">Acquerello rice, poached lobster tail, and hand-picked saffron threads.</p>
@@ -610,26 +693,26 @@
     </div>
     <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4 md:gap-6 stagger-children">
       <div class="space-y-4 md:space-y-6">
-        <div class="gallery-img rounded-2xl overflow-hidden">
+        <div class="gallery-img rounded-2xl overflow-hidden shadow-md">
           <img class="w-full object-cover h-48 sm:h-64" alt="Colorful hors d'oeuvres on a sleek tray" src="https://lh3.googleusercontent.com/aida-public/AB6AXuADhy1E4Yum1zO0Oewx-yeunWDmgWGkUUeVixYxM9j_3zIZmsbYU4-MRVp_rukjvTjbeQtsRr3jcCDI-7-YcIykWCBcBWx7yox--go2zFTPNVdliolzo2lF-HLiMhVsptOmjOTQYCpg_mSAxkV1och5XNNm_ZTNrnehpcX0uanSE7pRISzPGpefjQRR77txijo-ng0z5qAx7XblFExJdzpokGE1gXahZeg0-PyyyCjCr2chxPhWUPCKZ_sHEnF4PMSc9JrpNi1J6N4"/>
         </div>
-        <div class="gallery-img rounded-2xl overflow-hidden">
+        <div class="gallery-img rounded-2xl overflow-hidden shadow-md">
           <img class="w-full object-cover h-64 sm:h-96" alt="Luxury rooftop cocktail party at sunset" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBAgBmlTSLElNkyGl1xL8dTrdDO479nBULmtnLrYhKvdtu8sjk8eP7Vy3geuL4PLXhmi8L8fb1FtZRdcF_3zER_S-7uNqUgrwjRDxWjL22pQ9LnBk42yMWHpW_THqY4-Wi3vAe1bEfZKsjXy7LqTem4cXi7uFzAnkmt32prskabHGdAojqnNmm7amllxa1081iPEKLTuGw24H97Z4ZlIt1rgy2mA4tzVD2hDo05Pd6dpoZa3tNQ9lvkHGAvqyimrDbUE7vzGX_UeSU"/>
         </div>
       </div>
       <div class="space-y-4 md:space-y-6">
-        <div class="gallery-img rounded-2xl overflow-hidden">
+        <div class="gallery-img rounded-2xl overflow-hidden shadow-md">
           <img class="w-full object-cover h-72 sm:h-[500px]" alt="Artisanal grazing table with cheeses and meats" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAP2nKtfrxv74QT9TviOTuY_JpRnQpHpWAm8GA1D55PFZvoEgjyhGtmgtzettVIMMNJxZjGMskCivOo6JRLiySkEkZAk9iBjJoZ5QjN2oKP-Iy7NUP9pQpzcktgUf4lZRvoCtmfdV2KqtG4WM3GTJKRUdA6BRghkZoHtpytIQfx9BR7OQgG5j_mFkVmmEG_nG3j9s4n6QMOAVWGEN-hqGwGadb_25FsYZ4YjhMJtyPHPR5ckZH-8IVQ2_YP9cUyYpEUlMqDcIYfurs"/>
         </div>
-        <div class="gallery-img rounded-2xl overflow-hidden">
+        <div class="gallery-img rounded-2xl overflow-hidden shadow-md">
           <img class="w-full object-cover h-48 sm:h-64" alt="Champagne tower at a glamorous gala dinner" src="https://lh3.googleusercontent.com/aida-public/AB6AXuC5NxYDDqXAVLmEGZIQ2fNIUlfERND-famW-igdU7jSBJCzGPx3KODGIDdxqbRq8-8hXUbp7fQ4sW2sDnOMyGw9pTNm0Nn6omal17wzHjMPVMGILAh-NQqOGgqOZZC9lFTQshmPEEN65CJe10xsIzrw9OniqW7FX02mxzCxphqnQ3WyHFKU8botLIobvqYhHmH9-sQa00yT2o5U8YmFP3AWaq5moXMpGitOIM2GfOqhZcYt55C5UZDJ_1dpdC0wc6MccBZnJ1CzoJE"/>
         </div>
       </div>
       <div class="space-y-4 md:space-y-6 sm:col-span-2 md:col-span-1">
-        <div class="gallery-img rounded-2xl overflow-hidden">
+        <div class="gallery-img rounded-2xl overflow-hidden shadow-md">
           <img class="w-full object-cover h-56 sm:h-80" alt="Chocolate sphere dessert with caramel sauce" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDkRUguYZkVwbHTPFOvWCRDPyBX-O-1ZkEAhm9dTvM1z7FChzHlPyg11VILws33Hnm32Sl8H42z1yzeiC6R0t4RWsomvVFqGCxWrbx9REs8oM9JxcjNB5FKUFrixoq-0fRO8fSZ0c6WV4VmUP9PHr73ARk4EZ0jCMrmLhdmmyv2KZDJ5XQU1sDi_hWaaZWqIR5JfepH6gfAMLG9lPeMfsbohh1xTKdKi6zeAUOlP-PYM0ha0hhehM1z8SFK7V5M1cdm1iPNK8JmXz4"/>
         </div>
-        <div class="gallery-img rounded-2xl overflow-hidden">
+        <div class="gallery-img rounded-2xl overflow-hidden shadow-md">
           <img class="w-full object-cover h-56 sm:h-80" alt="Professional catering staff in formation" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCA-Ck9ewd1pIqlCutbX7sC_CJ4WC9okCM8o6gBGC-F5YpsoBUxhkPAqxaa0VmMmK8UgVz_Kdg7jhtn10AfmBTOF1WPezYo74aCOgDjytDu_6Pgbs73FDo1aJ3XW7Iyyxk-XHwxHICJDVB2Tdrq7Hg0Bw9v-tS4Xyo9VludwESV_-kZFS2YB6BGhM7jnqqFBk_7VlQR34aezLr0s5VG889aokwEZIgLV8mOdw-hbOAGbOXTezCIRYH2Y1DdygR3JDpKjRWo7GA4S-c"/>
         </div>
       </div>
@@ -651,8 +734,9 @@
           Guest Experiences
         </div>
       </div>
-      <div class="min-h-[250px] md:min-h-[300px] flex items-center justify-center" id="testimonial-slider">
-        <div class="space-y-6 md:space-y-8 reveal" id="testimonial-content">
+      <!-- 3D Glass Testimonial Slider Card -->
+      <div class="min-h-[250px] md:min-h-[300px] flex items-center justify-center bg-white/5 backdrop-blur-md rounded-2xl border border-white/10 p-6 md:p-10 shadow-xl tilt-card" id="testimonial-slider">
+        <div class="space-y-6 md:space-y-8 reveal tilt-child" id="testimonial-content">
           <p class="font-display text-2xl md:text-3xl lg:text-4xl italic leading-snug" id="testimonial-text">
             "Jaasiel Catering transformed our wedding into a gourmet journey. Every dish was a conversation piece, and the service was flawlessly professional. Simply the best in the city."
           </p>
@@ -681,8 +765,12 @@
 </section>
 
 <!-- Contact Section -->
-<section class="py-20 md:py-32 bg-background" id="contact">
-  <div class="max-w-[1280px] mx-auto px-5 md:px-16 grid md:grid-cols-2 gap-12 md:gap-20">
+<section class="py-20 md:py-32 bg-background relative overflow-hidden" id="contact">
+  <div class="floating-container">
+    <div class="blob-3d blob-gold blob-blur w-[400px] h-[400px] -top-20 -left-20"></div>
+    <div class="blob-3d blob-navy blob-blur w-[500px] h-[500px] -bottom-20 -right-20 animation-delay-2000"></div>
+  </div>
+  <div class="max-w-[1280px] mx-auto px-5 md:px-16 grid md:grid-cols-2 gap-12 md:gap-20 relative z-10">
     <div class="space-y-10 md:space-y-12 reveal">
       <div>
         <span class="font-body text-label-lg text-secondary tracking-widest uppercase">Get In Touch</span>
@@ -720,8 +808,9 @@
         </div>
       </div>
     </div>
-    <div class="bg-white p-6 md:p-10 lg:p-12 rounded-2xl shadow-xl border border-primary/5 reveal">
-      <form class="space-y-5 md:space-y-6">
+    <!-- 3D Card Contact Form -->
+    <div class="bg-white p-6 md:p-10 lg:p-12 rounded-2xl shadow-xl border border-primary/5 tilt-card reveal">
+      <form class="space-y-5 md:space-y-6 tilt-child">
         <div class="grid grid-cols-1 sm:grid-cols-2 gap-5 md:gap-6">
           <div class="space-y-2">
             <label class="font-body text-label-sm text-on-surface-variant">Full Name</label>
@@ -987,23 +1076,37 @@
       updateTestimonial(currentTestimonial);
     }, 6000);
   });
+
+  // ========== 3D Card Tilt Effect ==========
+  const tiltCards = document.querySelectorAll('.tilt-card');
+  
+  if (window.matchMedia('(min-width: 1024px)').matches) {
+    tiltCards.forEach(card => {
+      card.addEventListener('mousemove', (e) => {
+        const rect = card.getBoundingClientRect();
+        const x = e.clientX - rect.left;
+        const y = e.clientY - rect.top;
+        
+        const xc = rect.width / 2;
+        const yc = rect.height / 2;
+        
+        // Max tilt degree of 12
+        const angleX = -((y - yc) / yc) * 12;
+        const angleY = ((x - xc) / xc) * 12;
+        
+        card.style.transform = `perspective(1000px) rotateX(${angleX}deg) rotateY(${angleY}deg)`;
+      });
+      
+      card.addEventListener('mouseenter', () => {
+        card.style.transition = 'transform 0.1s ease-out, box-shadow 0.3s ease';
+      });
+      
+      card.addEventListener('mouseleave', () => {
+        card.style.transition = 'transform 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94), box-shadow 0.3s ease';
+        card.style.transform = 'perspective(1000px) rotateX(0deg) rotateY(0deg)';
+      });
+    });
+  }
 </script>
 </body>
 </html>
-<!-- anslate-y-10');
-            observer.observe(el);
-        });
-
-        // Sticky Nav logic
-        window.onscroll = function() {
-            const nav = document.querySelector('nav');
-            if (window.pageYOffset > 50) {
-                nav.classList.add('shadow-lg', 'h-16');
-                nav.classList.remove('h-20');
-            } else {
-                nav.classList.remove('shadow-lg', 'h-16');
-                nav.classList.add('h-20');
-            }
-        }; -->
-    </script>
-</body></html>
